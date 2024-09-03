@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #1E1E1E;
+}
+
+html {
+  height: 100%;
+  
+  body {
+    height: 100%;
+    display: flex;
+    background-color: var(--primary-color);
+    color: white;
+  }
+}
