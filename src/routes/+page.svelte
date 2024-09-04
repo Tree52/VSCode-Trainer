@@ -13,6 +13,7 @@
     for (let i = 0; i < combos.length; i++) if (heldKeys.toString() === combos[i].toString()) return true;
     return false;
   });
+  let isLoading = $state(true);
 
   const onkeydown = (e: KeyboardEvent) => {
     e.preventDefault();
@@ -53,9 +54,33 @@
   <div>
     {Object.keys(tasks)[randomTaskIndex]}
   </div>
-  <div class="w-1/2 p-2">
-    <video autoplay {src} muted loop></video>
+  <div class="flex w-1/2 items-center justify-center p-2">
+    <video onloadstart={() => { isLoading = true; }} oncanplay={() => { isLoading = false; }} class:isLoading autoplay {src} muted loop></video>
+    {#if isLoading}
+      <div class="spinner"></div>
+    {/if}
   </div>
 </main>
 
 <svelte:window onblur={() => { heldKeys = []; }} {onkeydown} {onkeyup}></svelte:window>
+
+<style>
+  .isLoading {
+    display: none;
+  }
+
+  .spinner {
+    width: 56px;
+    height: 56px;
+    border: 11.2px #ffffff double;
+    border-left-style: solid;
+    border-radius: 50%;
+    animation: spinner-aib1d7 0.75s infinite linear;
+  }
+
+  @keyframes spinner-aib1d7 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
