@@ -1,0 +1,285 @@
+Catagory	Shortcut	Description
+Basic editing	Ctrl+K Ctrl+C	Add line comment
+Basic editing	⌘K ⌘C	Add line comment
+Basic editing	Ctrl+C	Copy line (empty selection)
+Basic editing	⌘C	Copy line (empty selection)
+Basic editing	⇧⌥↓ / ⇧⌥↑	Copy line down/up
+Basic editing	Shift+Alt + ↓ / ↑	Copy line up/down
+Basic editing	Ctrl+X	Cut line (empty selection)
+Basic editing	⌘X	Cut line (empty selection)
+Basic editing	Ctrl+Shift+K	Delete line
+Basic editing	⇧⌘K	Delete line
+Basic editing	Ctrl+K Ctrl+0 / Ctrl+K Ctrl+J	Fold/Unfold all regions
+Basic editing	⌘K ⌘0 / ⌘K ⌘J	Fold/unfold all regions
+Basic editing	Ctrl+K Ctrl+ [ / ]	Fold/unfold all subregions
+Basic editing	⌘K ⌘[ / ⌘K ⌘]	Fold/unfold all subregions
+Basic editing	Ctrl+Shift+ [ / ]	Fold/unfold region
+Basic editing	⌥⌘[ / ⌥⌘]	Fold/unfold region
+Basic editing	Ctrl+Home	Go to beginning of file
+Basic editing	Ctrl+ Home / End	Go to beginning/end of file
+Basic editing	⌘↑ / ⌘↓	Go to beginning/end of file
+Basic editing	Home / End	Go to beginning/end of line
+Basic editing	Ctrl+End	Go to end of file
+Basic editing	Ctrl+] / Ctrl+[	Indent/Outdent line
+Basic editing	⌘] / ⌘[	Indent/outdent line
+Basic editing	Ctrl+] / [	Indent/outdent line
+Basic editing	Ctrl+Shift+Enter	Insert line above
+Basic editing	Ctrl+Enter	Insert line below
+Basic editing	Ctrl+Enter / Ctrl+Shift+Enter	Insert line below/ above
+Basic editing	⌘Enter / ⇧⌘Enter	Insert line below/above
+Basic editing	Ctrl+Shift+\	Jump to matching bracket
+Basic editing	⇧⌘\	Jump to matching bracket
+Basic editing	Alt+ ↓ / ↑	Move line down/up
+Basic editing	⌥↓ / ⌥↑	Move line down/up
+Basic editing	Alt+ ↑ / ↓	Move line up/down
+Basic editing	Ctrl+K Ctrl+U	Remove line comment
+Basic editing	⌘K ⌘U	Remove line comment
+Basic editing	Ctrl+ ↑ / ↓	Scroll line up/down
+Basic editing	⌃PgUp / ⌃PgDn	Scroll line up/down
+Basic editing	Ctrl+↑ / ↓	Scroll line up/down
+Basic editing	Alt+ PgUp / PgDn	Scroll page up/down
+Basic editing	⌘PgUp /⌘PgDn	Scroll page up/down
+Basic editing	Ctrl+Shift+A	Toggle block comment
+Basic editing	⇧⌥A	Toggle block comment
+Basic editing	Ctrl+/	Toggle line comment
+Basic editing	⌘/	Toggle line comment
+Basic editing	Ctrl+M	Toggle Tab moves focus
+Basic editing	Alt+Z	Toggle word wrap
+Basic editing	⌥Z	Toggle word wrap
+Debug	Ctrl+K Ctrl+I	Show hover
+Debug	⌘K ⌘I	Show hover
+Debug	F5	Start / Continue
+Debug	F5	Start/Continue
+Debug	F11 / ⇧F11	Step into/ out
+Debug	F11 / Shift+F11	Step into/out
+Debug	F10	Step over
+Debug	Shift+F5	Stop
+Debug	⇧F5	Stop
+Debug	F9	Toggle breakpoint
+Display	Ctrl+Shift+V	Open Markdown preview
+Display	⇧⌘V	Open Markdown preview
+Display	Ctrl+K V	Open Markdown preview to the side
+Display	⌘K V	Open Markdown preview to the side
+Display	Ctrl+Shift+C	Open new command prompt/terminal
+Display	Ctrl+Shift+H	Replace in files
+Display	⇧⌘H	Replace in files
+Display	Ctrl+Shift+D	Show Debug
+Display	⇧⌘D	Show Debug
+Display	Ctrl+Shift+E	Show Explorer / Toggle focus
+Display	⇧⌘E	Show Explorer / Toggle focus
+Display	Ctrl+Shift+X	Show Extensions
+Display	⇧⌘X	Show Extensions
+Display	Ctrl+K Ctrl+H	Show Output panel
+Display	⇧⌘U	Show Output panel
+Display	Ctrl+Shift+U	Show Output panel
+Display	Ctrl+Shift+F	Show Search
+Display	⇧⌘F	Show Search
+Display	Ctrl+Shift+G	Show Source Control
+Display	⌃⇧G	Show Source Control
+Display	Shift+Alt+0	Toggle editor layout (horizontal/vertical)
+Display	⌥⌘0	Toggle editor layout (horizontal/vertical)
+Display	F11	Toggle full screen
+Display	⌃⌘F	Toggle full screen
+Display	Ctrl+Shift+J	Toggle Search details
+Display	⇧⌘J	Toggle Search details
+Display	Ctrl+B	Toggle Sidebar visibility
+Display	⌘B	Toggle Sidebar visibility
+Display	Ctrl+K Z	Zen Mode (Esc Esc to exit)
+Display	⌘K Z	Zen Mode (Esc Esc to exit)
+Display	Ctrl+ = / -	Zoom in/out
+Display	⌘= / ⇧⌘-	Zoom in/out
+Editor management	Ctrl+W	Close editor
+Editor management	⌘W	Close editor
+Editor management	Ctrl+F4 or Ctrl+W	Close editor
+Editor management	Ctrl+K F	Close folder
+Editor management	⌘K F	Close folder
+Editor management	Ctrl+ 1 / 2 / 3	Focus into 1st 2nd or 3rd editor group
+Editor management	Ctrl+ 1 / 2 / 3	Focus into 1st, 2nd, 3rd editor group
+Editor management	⌘1 / ⌘2 / ⌘3	Focus into 1st, 2nd, 3rd editor group
+Editor management	Ctrl+K Ctrl + →	Focus into next editor group
+Editor management	Ctrl+K Ctrl + ←	Focus into previous editor group
+Editor management	⌘K ⌘← / ⌘K ⌘→	Focus into previous/next editor group
+Editor management	Ctrl+K Ctrl+ ←/→	Focus into previous/next editor group
+Editor management	⌘K ← / ⌘K →	Move active editor group
+Editor management	Ctrl+K ← / →	Move active editor group
+Editor management	Ctrl+K ←	Move active editor group left/up
+Editor management	Ctrl+K →	Move active editor group right/down
+Editor management	Ctrl+Shift+PgUp	Move editor left
+Editor management	⌘K ⇧⌘← / ⌘K ⇧⌘→	Move editor left/right
+Editor management	Ctrl+Shift+PgUp / PgDn	Move editor left/right
+Editor management	Ctrl+Shift+PgDn	Move editor right
+Editor management	Ctrl+\	Split editor
+Editor management	⌘\	Split editor
+File management	Ctrl+W	Close
+File management	⌘W	Close
+File management	Ctrl+F4	Close
+File management	Ctrl+K Ctrl+W	Close All
+File management	⌘K ⌘W	Close All
+File management	Ctrl+K P	Copy path of active file
+File management	⌘K P	Copy path of active file
+File management	Ctrl+K Enter	Keep preview mode editor open
+File management	⌘K Enter	Keep preview mode editor open
+File management	Ctrl+N	New File
+File management	⌘N	New File
+File management	Ctrl+O	Open File...
+File management	⌘O	Open File...
+File management	Ctrl+Tab	Open next
+File management	⌃Tab / ⌃⇧Tab	Open next / previous
+File management	Ctrl+Shift+Tab	Open previous
+File management	Ctrl+Shift+T	Reopen closed editor
+File management	⇧⌘T	Reopen closed editor
+File management	Ctrl+K R	Reveal active file in Explorer
+File management	⌘K R	Reveal active file in Finder
+File management	Ctrl+S	Save
+File management	⌘S	Save
+File management	⌥⌘S	Save All
+File management	Ctrl+K S	Save All
+File management	Ctrl+Shift+S	Save As...
+File management	⇧⌘S	Save As...
+File management	Ctrl+K O	Show active file in new window/instance
+File management	⌘K O	Show active file in new window/instance
+General	Ctrl+W	Close window/instance
+General	⌘W	Close window/instance
+General	Ctrl+Shift+W	Close window/instance
+General	Ctrl+K Ctrl+S	Keyboard Shortcuts
+General	⌘K ⌘S	Keyboard Shortcuts
+General	Ctrl+Shift+N	New window/instance
+General	⇧⌘N	New window/instance
+General	Ctrl+P	Quick Open Go to File…
+General	Ctrl+P	Quick Open, Go to File...
+General	⌘P	Quick Open, Go to File…
+General	Ctrl+Shift+P, F1	Show Command Palette
+General	⇧⌘P, F1	Show Command Palette
+General	Ctrl+Shift+P or F1	Show Command Palette
+General	Ctrl+,	User Settings
+General	⌘,	User Settings
+Integrated terminal	Ctrl+Shift+C	Copy selection
+Integrated terminal	⌘C	Copy selection
+Integrated terminal	Ctrl+C	Copy selection
+Integrated terminal	Ctrl+Shift+`	Create new terminal
+Integrated terminal	⌃⇧`	Create new terminal
+Integrated terminal	Ctrl+Shift+V	Paste into active terminal
+Integrated terminal	Ctrl+V	Paste into active terminal
+Integrated terminal	Shift+ PgUp / PgDn	Scroll page up/down
+Integrated terminal	PgUp / PgDn	Scroll page up/down
+Integrated terminal	Shift+PgUp / PgDn	Scroll page up/down
+Integrated terminal	Shift+ Home / End	Scroll to top/bottom
+Integrated terminal	⌘Home / End	Scroll to top/bottom
+Integrated terminal	Ctrl+Home / End	Scroll to top/bottom
+Integrated terminal	Ctrl+Shift+ ↑ / ↓	Scroll up/down
+Integrated terminal	⌘↑ / ↓	Scroll up/down
+Integrated terminal	Ctrl+↑ / ↓	Scroll up/down
+Integrated terminal	Ctrl+`	Show integrated terminal
+Integrated terminal	⌃`	Show integrated terminal
+Multi-cursor and selection	Shift+Alt + drag mouse	Column (box) selection
+Multi-cursor and selection	⇧⌥ + drag mouse	Column (box) selection
+Multi-cursor and selection	Shift+Alt + (drag mouse)	Column (box) selection
+Multi-cursor and selection	Ctrl+Shift+Alt + (arrow key)	Column (box) selection
+Multi-cursor and selection	⇧⌥⌘← / →	Column (box) selection left/right
+Multi-cursor and selection	⇧⌥⌘PgDn	Column (box) selection page down
+Multi-cursor and selection	⇧⌥⌘PgUp	Column (box) selection page up
+Multi-cursor and selection	Ctrl+Shift+Alt +PgUp/PgDn	Column (box) selection page up/down
+Multi-cursor and selection	⇧⌥⌘↑ / ↓	Column (box) selection up/down
+Multi-cursor and selection	⌃⇧⌘→ / ←	Expand / shrink selection
+Multi-cursor and selection	Shift+Alt + →	Expand selection
+Multi-cursor and selection	Shift+Alt+→	Expand selection
+Multi-cursor and selection	⌥ + click	Insert cursor
+Multi-cursor and selection	Alt+Click	Insert cursor
+Multi-cursor and selection	⌥⌘↑	Insert cursor above
+Multi-cursor and selection	Ctrl+Alt+ ↑ / ↓	Insert cursor above / below
+Multi-cursor and selection	Shift+Alt+ ↑ / ↓	Insert cursor above/below
+Multi-cursor and selection	Shift+Alt+I	Insert cursor at end of each line selected
+Multi-cursor and selection	⇧⌥I	Insert cursor at end of each line selected
+Multi-cursor and selection	⌥⌘↓	Insert cursor below
+Multi-cursor and selection	Alt+Click	Insert cursor*
+Multi-cursor and selection	Alt+PgUp / PgDn	Scroll page up/down
+Multi-cursor and selection	Ctrl+Shift+L	Select all occurrences of current selection
+Multi-cursor and selection	⇧⌘L	Select all occurrences of current selection
+Multi-cursor and selection	Ctrl+F2	Select all occurrences of current word
+Multi-cursor and selection	⌘F2	Select all occurrences of current word
+Multi-cursor and selection	Ctrl+L	Select current line
+Multi-cursor and selection	⌘L	Select current line
+Multi-cursor and selection	Shift+Alt + ←	Shrink selection
+Multi-cursor and selection	Shift+Alt+←	Shrink selection
+Multi-cursor and selection	Ctrl+U	Undo last cursor operation
+Multi-cursor and selection	⌘U	Undo last cursor operation
+Navigation	Ctrl+K M	Change file language
+Navigation	Shift+Alt+F	Format document
+Navigation	Ctrl+K Ctrl+F	Format selection
+Navigation	Ctrl+Alt+-	Go back
+Navigation	Alt+ ← / →	Go back / forward
+Navigation	⌃- / ⌃⇧-	Go back/forward
+Navigation	Ctrl+Shift+-	Go forward
+Navigation	F12	Go to Definition
+Navigation	Ctrl+P	Go to File...
+Navigation	⌘P	Go to File...
+Navigation	Ctrl+G	Go to Line...
+Navigation	⌃G	Go to Line...
+Navigation	F8	Go to next error or warning
+Navigation	F8 / ⇧F8	Go to next/previous error or warning
+Navigation	Shift+F8	Go to previous error or warning
+Navigation	Ctrl+Shift+O	Go to Symbol...
+Navigation	⇧⌘O	Go to Symbol...
+Navigation	Ctrl+Shift+Tab	Navigate editor group history
+Navigation	⌃⇧Tab	Navigate editor group history
+Navigation	Ctrl+K F12	Open Definition to the side
+Navigation	Alt+F12	Peek Definition
+Navigation	Ctrl+.	Quick Fix
+Navigation	F2	Rename Symbol
+Navigation	Ctrl+T	Show all Symbols
+Navigation	⌘T	Show all Symbols
+Navigation	Ctrl+Shift+M	Show Problems panel
+Navigation	⇧⌘M	Show Problems panel
+Navigation	Shift+F12	Show References
+Navigation	Ctrl+M	Toggle Tab moves focus
+Navigation	⌃⇧M	Toggle Tab moves focus
+Navigation	Ctrl+Shift+Space	Trigger parameter hints
+Navigation	Ctrl+Space or Ctrl+I	Trigger suggestion
+Navigation	Ctrl+K Ctrl+X	Trim trailing whitespace
+Rich languages editing	Ctrl+K Ctrl+C	Add line comment
+Rich languages editing	Ctrl+K M	Change file language
+Rich languages editing	⌘K M	Change file language
+Rich languages editing	Ctrl+K Ctrl+0	Fold (collapse) all regions
+Rich languages editing	Ctrl+K Ctrl+[	Fold (collapse) all subregions
+Rich languages editing	Ctrl+Shift+[	Fold (collapse) region
+Rich languages editing	Ctrl+Shift+I	Format document
+Rich languages editing	⇧⌥F	Format document
+Rich languages editing	Ctrl+K Ctrl+F	Format selection
+Rich languages editing	⌘K ⌘F	Format selection
+Rich languages editing	F12	Go to Definition
+Rich languages editing	Ctrl+K F12	Open Definition to the side
+Rich languages editing	⌘K F12	Open Definition to the side
+Rich languages editing	Ctrl+Shift+F10	Peek Definition
+Rich languages editing	⌥F12	Peek Definition
+Rich languages editing	Ctrl+.	Quick Fix
+Rich languages editing	⌘.	Quick Fix
+Rich languages editing	Ctrl+K Ctrl+U	Remove line comment
+Rich languages editing	F2	Rename Symbol
+Rich languages editing	Shift+F12	Show References
+Rich languages editing	⇧F12	Show References
+Rich languages editing	Shift+Alt+A	Toggle block comment
+Rich languages editing	Ctrl+/	Toggle line comment
+Rich languages editing	Alt+Z	Toggle word wrap
+Rich languages editing	Ctrl+Shift+Space	Trigger parameter hints
+Rich languages editing	⇧⌘Space	Trigger parameter hints
+Rich languages editing	Ctrl+Space, Ctrl+I	Trigger suggestion
+Rich languages editing	⌃Space, ⌘I	Trigger suggestion
+Rich languages editing	Ctrl+K Ctrl+X	Trim trailing whitespace
+Rich languages editing	⌘K ⌘X	Trim trailing whitespace
+Rich languages editing	Ctrl+K Ctrl+J	Unfold (uncollapse) all regions
+Rich languages editing	Ctrl+K Ctrl+]	Unfold (uncollapse) all subregions
+Rich languages editing	Ctrl+Shift+]	Unfold (uncollapse) region
+Search and replace	Ctrl+D	Add selection to next Find match
+Search and replace	⌘D	Add selection to next Find match
+Search and replace	Ctrl+F	Find
+Search and replace	⌘F	Find
+Search and replace	F3 / Shift+F3	Find next/previous
+Search and replace	⌘G / ⇧⌘G	Find next/previous
+Search and replace	Ctrl+K Ctrl+D	Move last selection to next Find match
+Search and replace	⌘K ⌘D	Move last selection to next Find match
+Search and replace	Ctrl+H	Replace
+Search and replace	⌥⌘F	Replace
+Search and replace	Alt+Enter	Select all occurences of Find match
+Search and replace	Alt+Enter	Select all occurrences of Find match
+Search and replace	⌥Enter	Select all occurrences of Find match
+Search and replace	Alt+C / R / W	Toggle case-sensitive / regex / whole word
