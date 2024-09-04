@@ -6,12 +6,14 @@ import insertLineBelow from "$lib/videos/insertLineBelow.mp4";
 import moveLineDown from "$lib/videos/moveLineDown.mp4";
 import moveLineUp from "$lib/videos/moveLineUp.mp4";
 
+// Order is ctrl+shift+alt+win
+// Preferences: Open Default Keyboard Shortcuts (JSON)
 export const tasks = {
-  "Copy line down": { combos: [["Alt", "Shift", "ArrowDown"], ["Shift", "Alt", "ArrowDown"]], src: copyLineDown },
-  "Copy line up": { combos: [["Alt", "Shift", "ArrowUp"], ["Shift", "Alt", "ArrowUp"]], src: copyLineUp },
-  "Delete line": { combos: [["Control", "Shift", "K"], ["Shift", "Control", "K"]], src: deleteLine },
-  "Insert line above": { combos: [["Control", "Shift", "Enter"], ["Shift", "Control", "Enter"]], src: insertLineAbove },
-  "Insert line below": { combos: [["Control", "Enter"]], src: insertLineBelow },
-  "Move line down": { combos: [["Alt", "ArrowDown"]], src: moveLineDown },
-  "Move line up": { combos: [["Alt", "ArrowUp"]], src: moveLineUp },
+  "Copy Line Down": { combos: ["shift+alt+down"], command: "editor.action.copyLinesDownAction", src: copyLineDown },
+  "Copy Line Up": { combos: ["shift+alt+up"], command: "editor.action.copyLinesUpAction", src: copyLineUp },
+  "Delete Line": { combos: ["ctrl+shift+k"], command: "editor.action.deleteLines", src: deleteLine },
+  "Insert Line Above": { combos: ["ctrl+shift+enter"], command: "editor.action.insertLineBefore", src: insertLineAbove },
+  "Insert Line Below": { combos: ["ctrl+enter"], command: "editor.action.insertLineAfter", src: insertLineBelow },
+  "Move Line Down": { combos: ["alt+down"], command: "editor.action.moveLinesDownAction", src: moveLineDown },
+  "Move Line Up": { combos: ["alt+up"], command: "editor.action.moveLinesUpAction", src: moveLineUp },
 };

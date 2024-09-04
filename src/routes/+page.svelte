@@ -6,24 +6,48 @@
   const getRandomIntInclusive = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
   let randomTaskIndex = $state(getRandomIntInclusive(0, Object.keys(tasks).length - 1));
-  let heldKeys: string[] = $state([]);
   let src = $derived(Object.values(tasks)[randomTaskIndex].src);
-  let isSolved = $derived.by(() => {
+  let heldKeys: string[] = $state([]);
+  let enterPressed = $state(false);
+  let isLoading = $state(false);
+
+  const heldKeysStyled = $derived.by(() => {
+    const heldKeysStyled: string[] = [];
+
+    if (heldKeys.includes("control")) heldKeysStyled.push("ctrl");
+    if (heldKeys.includes("shift")) heldKeysStyled.push("shift");
+    if (heldKeys.includes("alt")) heldKeysStyled.push("alt");
+    if (heldKeys.includes("meta")) heldKeysStyled.push("win");
+
+    for (let i = 0; i < heldKeys.length; i++) {
+      if (heldKeys[i] === "control" || heldKeys[i] === "shift" || heldKeys[i] === "alt" || heldKeys[i] === "meta") continue;
+      switch (heldKeys[i]) {
+        case "arrowup": heldKeysStyled.push("up"); break;
+        case "arrowdown": heldKeysStyled.push("down"); break;
+        case "arrowleft": heldKeysStyled.push("left"); break;
+        case "arrowright": heldKeysStyled.push("right"); break;
+        default: heldKeysStyled.push(heldKeys[i]); break;
+      }
+    }
+
+    return heldKeysStyled.join("+");
+  });
+
+  const isSolved = $derived.by(() => {
     const combos = Object.values(tasks)[randomTaskIndex].combos;
-    for (let i = 0; i < combos.length; i++) if (heldKeys.toString() === combos[i].toString()) return true;
+    for (let i = 0; i < combos.length; i++) if (heldKeysStyled === combos[i]) return true;
     return false;
   });
-  let isLoading = $state(false);
-  let enterPressed = $state(false);
 
   const onkeydown = (e: KeyboardEvent) => {
     if (e.key === "Enter") enterPressed = true;
+    if (e.key === "Escape") heldKeys = [];
     e.preventDefault();
     if (e.repeat) return;
-    heldKeys.push(e.key);
+    heldKeys.push(e.key.toLowerCase());
   };
 
-  const onkeyup = (e: KeyboardEvent) => { heldKeys = heldKeys.filter(key => key !== e.key); };
+  const onkeyup = (e: KeyboardEvent) => { heldKeys = heldKeys.filter(key => key !== e.key.toLowerCase()); };
 
   $effect(() => {
     if (isSolved) {
@@ -48,13 +72,7 @@
     <button class="border-2 border-white px-2 py-1 text-3xl font-bold" onclick={() => { enterPressed = true; }}>Enter</button>
   {:else}
     <div class="text-white">
-      {#each heldKeys as key, i}
-        {#if i === 0}
-          {key}
-        {:else}
-          {" + " + key}
-        {/if}
-      {/each}
+      {heldKeysStyled}
     </div>
     <div>
       {Object.keys(tasks)[randomTaskIndex]}
