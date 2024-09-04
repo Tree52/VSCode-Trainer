@@ -14,8 +14,10 @@
     return false;
   });
   let isLoading = $state(false);
+  let enterPressed = $state(false);
 
   const onkeydown = (e: KeyboardEvent) => {
+    if (e.key === "Enter") enterPressed = true;
     e.preventDefault();
     if (e.repeat) return;
     heldKeys.push(e.key);
@@ -42,24 +44,28 @@
 </div>
 
 <main class="flex flex-1 flex-col items-center justify-center">
-  <div class="text-white">
-    {#each heldKeys as key, i}
-      {#if i === 0}
-        {key}
-      {:else}
-        {" + " + key}
+  {#if !enterPressed}
+    <button class="border-2 border-white px-2 py-1 text-3xl font-bold" onclick={() => { enterPressed = true; }}>Enter</button>
+  {:else}
+    <div class="text-white">
+      {#each heldKeys as key, i}
+        {#if i === 0}
+          {key}
+        {:else}
+          {" + " + key}
+        {/if}
+      {/each}
+    </div>
+    <div>
+      {Object.keys(tasks)[randomTaskIndex]}
+    </div>
+    <div class="flex w-1/2 items-center justify-center p-2">
+      <video autoplay class:isLoading loop muted oncanplay={() => { isLoading = false; }} onloadstart={() => { isLoading = true; }} {src}></video>
+      {#if isLoading}
+        <div class="spinner"></div>
       {/if}
-    {/each}
-  </div>
-  <div>
-    {Object.keys(tasks)[randomTaskIndex]}
-  </div>
-  <div class="flex w-1/2 items-center justify-center p-2">
-    <video autoplay class:isLoading loop muted oncanplay={() => { isLoading = false; }} onloadstart={() => { isLoading = true; }} {src}></video>
-    {#if isLoading}
-      <div class="spinner"></div>
-    {/if}
-  </div>
+    </div>
+  {/if}
 </main>
 
 <svelte:window onblur={() => { heldKeys = []; }} {onkeydown} {onkeyup}></svelte:window>
