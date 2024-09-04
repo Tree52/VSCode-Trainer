@@ -13,7 +13,7 @@
     for (let i = 0; i < combos.length; i++) if (heldKeys.toString() === combos[i].toString()) return true;
     return false;
   });
-  let isLoading = $state(true);
+  let isLoading = $state(false);
 
   const onkeydown = (e: KeyboardEvent) => {
     e.preventDefault();
