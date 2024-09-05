@@ -6,9 +6,30 @@ import insertLineBelow from "$lib/videos/insertLineBelow.mp4";
 import moveLineDown from "$lib/videos/moveLineDown.mp4";
 import moveLineUp from "$lib/videos/moveLineUp.mp4";
 
+type Task = {
+  combos: string[];
+  command: string;
+  src: string;
+};
+
+type Tasks = {
+  [key: string]: Task;
+};
+
+const ref = <T>(initial: T) => {
+  let v = $state(initial);
+  const reset = () => (v = initial);
+
+  return {
+    reset,
+    set v(value) { v = value; },
+    get v() { return v; },
+  };
+};
+
 // Order is ctrl+shift+alt+win
 // Preferences: Open Default Keyboard Shortcuts (JSON)
-export const tasks = {
+export const tasks = ref<Tasks>({
   "Copy Line Down": { combos: ["shift+alt+down"], command: "editor.action.copyLinesDownAction", src: copyLineDown },
   "Copy Line Up": { combos: ["shift+alt+up"], command: "editor.action.copyLinesUpAction", src: copyLineUp },
   "Delete Line": { combos: ["ctrl+shift+k"], command: "editor.action.deleteLines", src: deleteLine },
@@ -16,4 +37,6 @@ export const tasks = {
   "Insert Line Below": { combos: ["ctrl+enter"], command: "editor.action.insertLineAfter", src: insertLineBelow },
   "Move Line Down": { combos: ["alt+down"], command: "editor.action.moveLinesDownAction", src: moveLineDown },
   "Move Line Up": { combos: ["alt+up"], command: "editor.action.moveLinesUpAction", src: moveLineUp },
-};
+});
+
+export const enterPressed = ref(false);

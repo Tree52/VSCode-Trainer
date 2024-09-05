@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { tasks } from "$lib/tasks";
+  import Header from "$lib/components/Header.svelte";
+  import { enterPressed, tasks } from "$lib/refs.svelte";
 
   import "../app.css";
 
   const getRandomIntInclusive = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-  let randomTaskIndex = $state(getRandomIntInclusive(0, Object.keys(tasks).length - 1));
-  let src = $derived(Object.values(tasks)[randomTaskIndex].src);
+  let randomTaskIndex = $state(getRandomIntInclusive(0, Object.keys(tasks.v).length - 1));
+  let src = $derived(Object.values(tasks.v)[randomTaskIndex].src);
   let heldKeys: string[] = $state([]);
-  let enterPressed = $state(false);
   let isLoading = $state(false);
 
   const heldKeysStyled = $derived.by(() => {
@@ -34,13 +34,13 @@
   });
 
   const isSolved = $derived.by(() => {
-    const combos = Object.values(tasks)[randomTaskIndex].combos;
+    const combos = Object.values(tasks.v)[randomTaskIndex].combos;
     for (let i = 0; i < combos.length; i++) if (heldKeysStyled === combos[i]) return true;
     return false;
   });
 
   const onkeydown = (e: KeyboardEvent) => {
-    if (e.key === "Enter") enterPressed = true;
+    if (e.key === "Enter") enterPressed.v = true;
     if (e.key === "Escape") heldKeys = [];
     e.preventDefault();
     if (e.repeat) return;
@@ -53,10 +53,12 @@
     if (isSolved) {
       heldKeys = [];
       const temp = randomTaskIndex;
-      while (temp === randomTaskIndex) randomTaskIndex = getRandomIntInclusive(0, Object.keys(tasks).length - 1);
+      while (temp === randomTaskIndex) randomTaskIndex = getRandomIntInclusive(0, Object.keys(tasks.v).length - 1);
     }
   });
 </script>
+
+<Header />
 
 <div class="absolute right-0 top-0 scale-50">
   <a href="https://github.com/Tree52/VSCode-Trainer">
@@ -68,14 +70,14 @@
 </div>
 
 <main class="flex flex-1 flex-col items-center justify-center">
-  {#if !enterPressed}
-    <button class="border-2 border-white px-2 py-1 text-3xl font-bold" onclick={() => { enterPressed = true; }}>Enter</button>
+  {#if !enterPressed.v}
+    <button class="border-2 border-white px-2 py-1 text-3xl font-bold" onclick={() => { enterPressed.v = true; }}>Enter</button>
   {:else}
     <div class="text-white">
       {heldKeysStyled}
     </div>
     <div>
-      {Object.keys(tasks)[randomTaskIndex]}
+      {Object.keys(tasks.v)[randomTaskIndex]}
     </div>
     <div class="flex w-1/2 items-center justify-center p-2">
       <video autoplay class:isLoading loop muted oncanplay={() => { isLoading = false; }} onloadstart={() => { isLoading = true; }} {src}></video>
