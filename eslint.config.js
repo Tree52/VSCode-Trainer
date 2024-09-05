@@ -26,7 +26,7 @@ export default [
       parserOptions: { parser: ts.parser },
     },
   },
-  { ignores: ["build/", ".svelte-kit/"] },
+  { ignores: ["build/", ".svelte-kit/", "helloWorld.js"] },
   {
     rules: {
       ...tailwind.configs.error.rules,
