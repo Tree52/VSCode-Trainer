@@ -88,6 +88,10 @@
   {/if}
 </main>
 
+<svelte:head>
+  <title>VSCode Trainer</title>
+</svelte:head>
+
 <svelte:window onblur={() => { heldKeys = []; }} {onkeydown} {onkeyup}></svelte:window>
 
 <style>
