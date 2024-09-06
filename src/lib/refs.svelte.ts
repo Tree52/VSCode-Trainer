@@ -33,21 +33,22 @@ const ref = <T>(initial: T) => {
   };
 };
 
-// Order is ctrl+shift+alt+win
+// Order is ctrl+shift+alt+(win/cmd/super)
 // Preferences: Open Default Keyboard Shortcuts (JSON)
+// https://github.com/codebling/vs-code-default-keybindings
 export const tasks = ref<Tasks>({
-  "Copy Line Down": { combos: ["shift+alt+down"], command: "editor.action.copyLinesDownAction", src: copyLineDown },
-  "Copy Line Up": { combos: ["shift+alt+up"], command: "editor.action.copyLinesUpAction", src: copyLineUp },
-  "Delete Line": { combos: ["ctrl+shift+k"], command: "editor.action.deleteLines", src: deleteLine },
-  "Fold": { combos: ["ctrl+shift+["], command: "editor.fold", src: fold },
-  "Go to Bracket": { combos: ["ctrl+shift+\\"], command: "editor.action.jumpToBracket", src: goToBracket },
-  "Indent Line": { combos: ["ctrl+]"], command: "editor.action.indentLines", src: indentLine },
-  "Insert Line Above": { combos: ["ctrl+shift+enter"], command: "editor.action.insertLineBefore", src: insertLineAbove },
-  "Insert Line Below": { combos: ["ctrl+enter"], command: "editor.action.insertLineAfter", src: insertLineBelow },
+  "Copy Line Down": { combos: ["shift+alt+down", "ctrl+shift+alt+down"], command: "editor.action.copyLinesDownAction", src: copyLineDown },
+  "Copy Line Up": { combos: ["shift+alt+up", "ctrl+shift+alt+up"], command: "editor.action.copyLinesUpAction", src: copyLineUp },
+  "Delete Line": { combos: ["ctrl+shift+k", "shift+cmd+k"], command: "editor.action.deleteLines", src: deleteLine },
+  "Fold": { combos: ["ctrl+shift+[", "alt+cmd+["], command: "editor.fold", src: fold },
+  "Go to Bracket": { combos: ["ctrl+shift+\\", "shift+cmd+\\"], command: "editor.action.jumpToBracket", src: goToBracket },
+  "Indent Line": { combos: ["ctrl+]", "cmd+]"], command: "editor.action.indentLines", src: indentLine },
+  "Insert Line Above": { combos: ["ctrl+shift+enter", "shift+cmd+enter"], command: "editor.action.insertLineBefore", src: insertLineAbove },
+  "Insert Line Below": { combos: ["ctrl+enter", "cmd+enter"], command: "editor.action.insertLineAfter", src: insertLineBelow },
   "Move Line Down": { combos: ["alt+down"], command: "editor.action.moveLinesDownAction", src: moveLineDown },
   "Move Line Up": { combos: ["alt+up"], command: "editor.action.moveLinesUpAction", src: moveLineUp },
-  "Outdent Line": { combos: ["ctrl+[", "shift+tab"], command: "editor.action.outdentLines", src: outdentLine },
-  "Unfold": { combos: ["ctrl+shift+]"], command: "editor.unfold", src: unfold },
+  "Outdent Line": { combos: ["ctrl+[", "shift+tab", "cmd+["], command: "editor.action.outdentLines", src: outdentLine },
+  "Unfold": { combos: ["ctrl+shift+]", "alt+cmd+]"], command: "editor.unfold", src: unfold },
   "View: Toggle Word Wrap": { combos: ["alt+z"], command: "editor.action.toggleWordWrap", src: toggleWordWrap },
 });
 

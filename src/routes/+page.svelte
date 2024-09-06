@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { browser } from "$app/environment";
   import { codeToKeyMap } from "$lib/codeToKey";
   import Header from "$lib/components/Header.svelte";
   import { enterPressed, tasks } from "$lib/refs.svelte";
@@ -6,6 +7,18 @@
   import "../app.css";
 
   const getRandomIntInclusive = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+  let os = "";
+  if (browser) {
+    const userAgent = window.navigator.userAgent;
+
+    if (/Windows/i.test(userAgent)) os = "Windows";
+    else if (/Mac/i.test(userAgent)) os = "macOS";
+    else if (/Linux/i.test(userAgent)) os = "Linux";
+    // else if (/Android/i.test(userAgent)) os = "Android";
+    // else if (/iPhone|iPad|iPod/i.test(userAgent)) os = "iOS";
+    else os = "Unknown";
+  }
 
   let randomTaskIndex = $state(getRandomIntInclusive(0, Object.keys(tasks.v).length - 1));
   let src = $derived(Object.values(tasks.v)[randomTaskIndex].src);
@@ -18,7 +31,13 @@
     if (heldKeys.includes("ControlLeft") || heldKeys.includes("ControlRight")) heldKeysStyled.push("ctrl");
     if (heldKeys.includes("ShiftLeft") || heldKeys.includes("ShiftRight")) heldKeysStyled.push("shift");
     if (heldKeys.includes("AltLeft") || heldKeys.includes("AltRight")) heldKeysStyled.push("alt");
-    if (heldKeys.includes("MetaLeft") || heldKeys.includes("MetaRight")) heldKeysStyled.push("win");
+    if (heldKeys.includes("MetaLeft") || heldKeys.includes("MetaRight")) {
+      switch (os) {
+        case "Linux": heldKeysStyled.push("super"); break;
+        case "macOS": heldKeysStyled.push("cmd"); break;
+        case "Windows": heldKeysStyled.push("win"); break;
+      }
+    }
 
     for (let i = 0; i < heldKeys.length; i++) {
       if (["AltLeft", "AltRight", "ControlLeft", "ControlRight", "MetaLeft", "MetaRight", "ShiftLeft", "ShiftRight"].includes(heldKeys[i])) continue;
@@ -30,7 +49,7 @@
 
   const isSolved = $derived.by(() => {
     const combos = Object.values(tasks.v)[randomTaskIndex].combos;
-    for (let i = 0; i < combos.length; i++) if (heldKeysStyled === combos[i]) return true;
+    if (combos.includes(heldKeysStyled)) return true;
     return false;
   });
 
