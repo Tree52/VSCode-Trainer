@@ -14,7 +14,7 @@ import unfold from "$lib/videos/unfold.mp4";
 
 type Task = {
   combos: string[];
-  command: string;
+  commands: string[];
   src: string;
 };
 
@@ -37,19 +37,19 @@ const ref = <T>(initial: T) => {
 // Preferences: Open Default Keyboard Shortcuts (JSON)
 // https://github.com/codebling/vs-code-default-keybindings
 export const tasks = ref<Tasks>({
-  "Copy Line Down": { combos: ["shift+alt+down", "ctrl+shift+alt+down"], command: "editor.action.copyLinesDownAction", src: copyLineDown },
-  "Copy Line Up": { combos: ["shift+alt+up", "ctrl+shift+alt+up"], command: "editor.action.copyLinesUpAction", src: copyLineUp },
-  "Delete Line": { combos: ["ctrl+shift+k", "shift+cmd+k"], command: "editor.action.deleteLines", src: deleteLine },
-  "Fold": { combos: ["ctrl+shift+[", "alt+cmd+["], command: "editor.fold", src: fold },
-  "Go to Bracket": { combos: ["ctrl+shift+\\", "shift+cmd+\\"], command: "editor.action.jumpToBracket", src: goToBracket },
-  "Indent Line": { combos: ["ctrl+]", "cmd+]"], command: "editor.action.indentLines", src: indentLine },
-  "Insert Line Above": { combos: ["ctrl+shift+enter", "shift+cmd+enter"], command: "editor.action.insertLineBefore", src: insertLineAbove },
-  "Insert Line Below": { combos: ["ctrl+enter", "cmd+enter"], command: "editor.action.insertLineAfter", src: insertLineBelow },
-  "Move Line Down": { combos: ["alt+down"], command: "editor.action.moveLinesDownAction", src: moveLineDown },
-  "Move Line Up": { combos: ["alt+up"], command: "editor.action.moveLinesUpAction", src: moveLineUp },
-  "Outdent Line": { combos: ["ctrl+[", "shift+tab", "cmd+["], command: "editor.action.outdentLines", src: outdentLine },
-  "Unfold": { combos: ["ctrl+shift+]", "alt+cmd+]"], command: "editor.unfold", src: unfold },
-  "View: Toggle Word Wrap": { combos: ["alt+z"], command: "editor.action.toggleWordWrap", src: toggleWordWrap },
+  "Copy Line Down": { combos: ["shift+alt+down", "ctrl+shift+alt+down"], commands: ["editor.action.copyLinesDownAction"], src: copyLineDown },
+  "Copy Line Up": { combos: ["shift+alt+up", "ctrl+shift+alt+up"], commands: ["editor.action.copyLinesUpAction"], src: copyLineUp },
+  "Delete Line": { combos: ["ctrl+shift+k", "shift+cmd+k"], commands: ["editor.action.deleteLines"], src: deleteLine },
+  "Fold": { combos: ["ctrl+shift+[", "alt+cmd+["], commands: ["editor.fold"], src: fold },
+  "Go to Bracket": { combos: ["ctrl+shift+\\", "shift+cmd+\\"], commands: ["editor.action.jumpToBracket"], src: goToBracket },
+  "Indent Line": { combos: ["ctrl+]", "cmd+]"], commands: ["editor.action.indentLines"], src: indentLine },
+  "Insert Line Above": { combos: ["ctrl+shift+enter", "shift+cmd+enter"], commands: ["editor.action.insertLineBefore"], src: insertLineAbove },
+  "Insert Line Below": { combos: ["ctrl+enter", "cmd+enter"], commands: ["editor.action.insertLineAfter"], src: insertLineBelow },
+  "Move Line Down": { combos: ["alt+down"], commands: ["editor.action.moveLinesDownAction"], src: moveLineDown },
+  "Move Line Up": { combos: ["alt+up"], commands: ["editor.action.moveLinesUpAction"], src: moveLineUp },
+  "Outdent Line / outdent": { combos: ["ctrl+[", "shift+tab", "cmd+["], commands: ["editor.action.outdentLines", "outdent"], src: outdentLine },
+  "Unfold": { combos: ["ctrl+shift+]", "alt+cmd+]"], commands: ["editor.unfold"], src: unfold },
+  "View: Toggle Word Wrap": { combos: ["alt+z"], commands: ["editor.action.toggleWordWrap"], src: toggleWordWrap },
 });
 
 export const enterPressed = ref(false);

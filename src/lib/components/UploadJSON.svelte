@@ -1,6 +1,16 @@
 <script lang="ts">
   import { tasks } from "$lib/refs.svelte";
 
+  function search2DArray(array: string[][], target: string): [number, number] | null {
+    for (let row = 0; row < array.length; row++) {
+      for (let col = 0; col < array[row].length; col++) {
+        if (array[row][col] === target) return [row, col];
+      }
+    }
+
+    return null;
+  }
+
   let files: FileList | undefined = $state();
 
   const onchange = (e: Event) => {
@@ -17,10 +27,10 @@
           let keyBindings: { command: string; key: string }[] = JSON.parse(fileContent);
 
           const keys = Object.keys(tasks.v);
-          const commands = Object.values(tasks.v).map(task => task.command);
+          const commands = Object.values(tasks.v).map(task => task.commands);
           for (let i = 0; i < keyBindings.length; i++) {
-            const indexOf = commands.indexOf(keyBindings[i].command);
-            if (indexOf !== -1) tasks.v[keys[indexOf]].combos.push(keyBindings[i].key);
+            const location = search2DArray(commands, keyBindings[i].command);
+            if (location !== null) tasks.v[keys[location[0]]].combos.push(keyBindings[i].key);
           }
 
           alert("Custom keybindings added.");
