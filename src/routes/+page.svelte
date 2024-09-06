@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { codeToKeyMap } from "$lib/codeToKey";
   import Header from "$lib/components/Header.svelte";
   import { enterPressed, tasks } from "$lib/refs.svelte";
 
@@ -14,20 +15,14 @@
   const heldKeysStyled = $derived.by(() => {
     const heldKeysStyled: string[] = [];
 
-    if (heldKeys.includes("control")) heldKeysStyled.push("ctrl");
-    if (heldKeys.includes("shift")) heldKeysStyled.push("shift");
-    if (heldKeys.includes("alt")) heldKeysStyled.push("alt");
-    if (heldKeys.includes("meta")) heldKeysStyled.push("win");
+    if (heldKeys.includes("ControlLeft") || heldKeys.includes("ControlRight")) heldKeysStyled.push("ctrl");
+    if (heldKeys.includes("ShiftLeft") || heldKeys.includes("ShiftRight")) heldKeysStyled.push("shift");
+    if (heldKeys.includes("AltLeft") || heldKeys.includes("AltRight")) heldKeysStyled.push("alt");
+    if (heldKeys.includes("MetaLeft") || heldKeys.includes("MetaRight")) heldKeysStyled.push("win");
 
     for (let i = 0; i < heldKeys.length; i++) {
-      if (heldKeys[i] === "control" || heldKeys[i] === "shift" || heldKeys[i] === "alt" || heldKeys[i] === "meta") continue;
-      switch (heldKeys[i]) {
-        case "arrowup": heldKeysStyled.push("up"); break;
-        case "arrowdown": heldKeysStyled.push("down"); break;
-        case "arrowleft": heldKeysStyled.push("left"); break;
-        case "arrowright": heldKeysStyled.push("right"); break;
-        default: heldKeysStyled.push(heldKeys[i]); break;
-      }
+      if (["AltLeft", "AltRight", "ControlLeft", "ControlRight", "MetaLeft", "MetaRight", "ShiftLeft", "ShiftRight"].includes(heldKeys[i])) continue;
+      heldKeysStyled.push(codeToKeyMap[heldKeys[i]]);
     }
 
     return heldKeysStyled.join("+");
@@ -40,14 +35,14 @@
   });
 
   const onkeydown = (e: KeyboardEvent) => {
-    if (e.key === "Enter") enterPressed.v = true;
-    if (e.key === "Escape") heldKeys = [];
+    if (e.code === "Enter") enterPressed.v = true;
+    if (e.code === "Escape") heldKeys = [];
     e.preventDefault();
     if (e.repeat) return;
-    heldKeys.push(e.key.toLowerCase());
+    heldKeys.push(e.code);
   };
 
-  const onkeyup = (e: KeyboardEvent) => { heldKeys = heldKeys.filter(key => key !== e.key.toLowerCase()); };
+  const onkeyup = (e: KeyboardEvent) => { heldKeys = heldKeys.filter(code => code !== e.code); };
 
   $effect(() => {
     if (isSolved) {
