@@ -21,6 +21,7 @@
   }
 
   let randomTaskIndex = $state(getRandomIntInclusive(0, Object.keys(tasks.v).length - 1));
+  let combos = $derived(Object.values(tasks.v)[randomTaskIndex].combos);
   let src = $derived(Object.values(tasks.v)[randomTaskIndex].src);
   let heldKeys: string[] = $state([]);
   let isLoading = $state(false);
@@ -48,7 +49,6 @@
   });
 
   const isSolved = $derived.by(() => {
-    const combos = Object.values(tasks.v)[randomTaskIndex].combos;
     if (combos.includes(heldKeysStyled)) return true;
     return false;
   });
@@ -98,6 +98,9 @@
       {#if isLoading}
         <div class="spinner"></div>
       {/if}
+    </div>
+    <div class="bg-white hover:bg-primary-color">
+      {combos.join(" ")}
     </div>
   {/if}
 </main>
