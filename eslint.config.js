@@ -30,7 +30,6 @@ export default [
   {
     rules: {
       ...tailwind.configs.error.rules,
-      "@stylistic/max-len": ["error", { code: 160 }],
       "@stylistic/max-statements-per-line": ["error", { max: 3 }],
       "@stylistic/member-delimiter-style": ["error", {}], // {} overrides recommended-flat config with default.
       "@stylistic/quotes": ["error", "double"],
@@ -44,7 +43,6 @@ export default [
         },
         {
           message: "FunctionDeclaration: Arrow functions preferred",
-          /* eslint-disable-next-line */
           selector: "FunctionDeclaration[generator=false]:not(:has(ThisExpression)):not(MethodDefinition[kind='get'] > .value):not(MethodDefinition[kind='set'] > .value)",
         },
       ],

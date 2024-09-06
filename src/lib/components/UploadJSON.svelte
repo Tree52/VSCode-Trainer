@@ -1,7 +1,7 @@
 <script lang="ts">
   import { tasks } from "$lib/refs.svelte";
 
-  function search2DArray(array: string[][], target: string): [number, number] | null {
+  const search2DArray = (array: string[][], target: string): [number, number] | null => {
     for (let row = 0; row < array.length; row++) {
       for (let col = 0; col < array[row].length; col++) {
         if (array[row][col] === target) return [row, col];
@@ -9,7 +9,7 @@
     }
 
     return null;
-  }
+  };
 
   let files: FileList | undefined = $state();
 
