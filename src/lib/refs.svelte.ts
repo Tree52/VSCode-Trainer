@@ -33,7 +33,7 @@ const ref = <T>(initial: T) => {
   };
 };
 
-// Order is ctrl+shift+alt+(win/cmd/super)
+// Order is ctrl+shift+alt+(win/cmd/meta)
 // Preferences: Open Default Keyboard Shortcuts (JSON)
 // https://github.com/codebling/vs-code-default-keybindings
 export const tasks = ref<Tasks>({

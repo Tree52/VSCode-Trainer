@@ -34,7 +34,7 @@
     if (heldKeys.includes("AltLeft") || heldKeys.includes("AltRight")) heldKeysStyled.push("alt");
     if (heldKeys.includes("MetaLeft") || heldKeys.includes("MetaRight")) {
       switch (os) {
-        case "Linux": heldKeysStyled.push("super"); break;
+        case "Linux": heldKeysStyled.push("meta"); break;
         case "macOS": heldKeysStyled.push("cmd"); break;
         case "Windows": heldKeysStyled.push("win"); break;
       }
