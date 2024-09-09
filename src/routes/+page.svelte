@@ -6,68 +6,89 @@
 
   import "../app.css";
 
+  // #region Utils
   const getRandomIntInclusive = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-  let os = "";
-  if (browser) {
-    const userAgent = window.navigator.userAgent;
+  const isModifierKey = (code: string) => {
+    const modifierKeys = ["ControlLeft", "ControlRight", "ShiftLeft", "ShiftRight", "AltLeft", "AltRight", "MetaLeft", "MetaRight"];
+    return modifierKeys.includes(code);
+  };
 
-    if (/Windows/i.test(userAgent)) os = "Windows";
-    else if (/Mac/i.test(userAgent)) os = "macOS";
-    else if (/Linux/i.test(userAgent)) os = "Linux";
-    // else if (/Android/i.test(userAgent)) os = "Android";
-    // else if (/iPhone|iPad|iPod/i.test(userAgent)) os = "iOS";
-    else os = "Unknown";
-  }
+  const getOS = () => {
+    if (browser) {
+      const userAgent = window.navigator.userAgent;
 
-  let randomTaskIndex = $state(getRandomIntInclusive(0, Object.keys(tasks.v).length - 1));
-  let combos = $derived(Object.values(tasks.v)[randomTaskIndex].combos);
-  let src = $derived(Object.values(tasks.v)[randomTaskIndex].src);
-  let heldKeys: string[] = $state([]);
+      if (/Windows/i.test(userAgent)) return "Windows";
+      else if (/Mac/i.test(userAgent)) return "macOS";
+      else if (/Linux/i.test(userAgent)) return "Linux";
+      // else if (/Android/i.test(userAgent)) return "Android";
+      // else if (/iPhone|iPad|iPod/i.test(userAgent)) return "iOS";
+    }
+  };
+  // #endregion
+
+  const values = Object.values(tasks.v);
+  const keys = Object.keys(tasks.v);
+  const os = getOS();
+
+  let randomTaskIndex = $state(getRandomIntInclusive(0, keys.length - 1));
+  let numNonModifierKeysPressed = 0;
   let isLoading = $state(false);
+  let heldKeys: string[] = [];
+  let result = $state("");
+  let time = 0;
 
-  const heldKeysStyled = $derived.by(() => {
-    const heldKeysStyled: string[] = [];
+  const randomTask = $derived({ combos: values[randomTaskIndex].combos, key: keys[randomTaskIndex], src: values[randomTaskIndex].src });
+  const isSolved = $derived(randomTask.combos.includes(result));
 
-    if (heldKeys.includes("ControlLeft") || heldKeys.includes("ControlRight")) heldKeysStyled.push("ctrl");
-    if (heldKeys.includes("ShiftLeft") || heldKeys.includes("ShiftRight")) heldKeysStyled.push("shift");
-    if (heldKeys.includes("AltLeft") || heldKeys.includes("AltRight")) heldKeysStyled.push("alt");
+  const styleHeldKeys = (code: string) => {
+    const _result: string[] = [];
+
+    if (heldKeys.includes("ControlLeft") || heldKeys.includes("ControlRight")) _result.push("ctrl");
+    if (heldKeys.includes("ShiftLeft") || heldKeys.includes("ShiftRight")) _result.push("shift");
+    if (heldKeys.includes("AltLeft") || heldKeys.includes("AltRight")) _result.push("alt");
     if (heldKeys.includes("MetaLeft") || heldKeys.includes("MetaRight")) {
       switch (os) {
-        case "Linux": heldKeysStyled.push("meta"); break;
-        case "macOS": heldKeysStyled.push("cmd"); break;
-        case "Windows": heldKeysStyled.push("win"); break;
+        case "Linux": _result.push("meta"); break;
+        case "macOS": _result.push("cmd"); break;
+        case "Windows": _result.push("win"); break;
       }
     }
+    if (!isModifierKey(code)) _result.push(codeToKeyMap[code]);
 
-    for (let i = 0; i < heldKeys.length; i++) {
-      if (["AltLeft", "AltRight", "ControlLeft", "ControlRight", "MetaLeft", "MetaRight", "ShiftLeft", "ShiftRight"].includes(heldKeys[i])) continue;
-      heldKeysStyled.push(codeToKeyMap[heldKeys[i]]);
-    }
+    return _result.join("+");
+  };
 
-    return heldKeysStyled.join("+");
-  });
-
-  const isSolved = $derived.by(() => {
-    if (combos.includes(heldKeysStyled)) return true;
-    return false;
-  });
+  const reset = () => {
+    numNonModifierKeysPressed = 0;
+    heldKeys = [];
+    result = "";
+  };
 
   const onkeydown = (e: KeyboardEvent) => {
-    if (e.code === "Enter") enterPressed.v = true;
-    if (e.code === "Escape") heldKeys = [];
     e.preventDefault();
     if (e.repeat) return;
+
+    clearTimeout(time);
+    time = setTimeout(reset, 500);
+
+    if (!isModifierKey(e.code)) numNonModifierKeysPressed++;
+    if (e.code === "Enter") enterPressed.v = true;
+
     heldKeys.push(e.code);
+
+    if (numNonModifierKeysPressed < 2) result = styleHeldKeys(e.code);
+    else if (numNonModifierKeysPressed === 2) result = result + " " + styleHeldKeys(e.code);
   };
 
   const onkeyup = (e: KeyboardEvent) => { heldKeys = heldKeys.filter(code => code !== e.code); };
 
   $effect(() => {
     if (isSolved) {
+      result = "";
       heldKeys = [];
-      const temp = randomTaskIndex;
-      while (temp === randomTaskIndex) randomTaskIndex = getRandomIntInclusive(0, Object.keys(tasks.v).length - 1);
+      const currentTaskIndex = randomTaskIndex;
+      while (currentTaskIndex === randomTaskIndex) randomTaskIndex = getRandomIntInclusive(0, keys.length - 1);
     }
   });
 </script>
@@ -87,19 +108,19 @@
     <button class="border-2 border-white px-2 py-1 text-3xl font-bold" onclick={() => { enterPressed.v = true; }}>Enter</button>
   {:else}
     <div class="text-white">
-      {heldKeysStyled}
+      {result}
     </div>
     <div>
-      {Object.keys(tasks.v)[randomTaskIndex]}
+      {randomTask.key}
     </div>
     <div class="flex w-1/2 items-center justify-center p-2">
-      <video autoplay class:isLoading loop muted oncanplay={() => { isLoading = false; }} onloadstart={() => { isLoading = true; }} {src}></video>
+      <video autoplay class:isLoading loop muted oncanplay={() => { isLoading = false; }} onloadstart={() => { isLoading = true; }} src={randomTask.src}></video>
       {#if isLoading}
         <div class="spinner"></div>
       {/if}
     </div>
     <div class="bg-white hover:bg-primary-color">
-      {combos.join(" ")}
+      {randomTask.combos.map(combo => `"${combo}"`).join(" ")}
     </div>
   {/if}
 </main>

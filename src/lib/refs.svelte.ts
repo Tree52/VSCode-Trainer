@@ -1,3 +1,4 @@
+import addLineComment from "$lib/videos/addLineComment.mp4";
 import copyLineDown from "$lib/videos/copyLineDown.mp4";
 import copyLineUp from "$lib/videos/copyLineUp.mp4";
 import deleteLine from "$lib/videos/deleteLine.mp4";
@@ -37,6 +38,7 @@ const ref = <T>(initial: T) => {
 // Preferences: Open Default Keyboard Shortcuts (JSON)
 // https://github.com/codebling/vs-code-default-keybindings
 export const tasks = ref<Tasks>({
+  "Add Line Comment / Toggle Comment": { combos: ["ctrl+k ctrl+c", "cmd+k cmd+c", "ctrl+/", "cmd+/"], commands: ["editor.action.addCommentLine", "editor.action.commentLine"], src: addLineComment },
   "Copy Line Down": { combos: ["shift+alt+down", "ctrl+shift+alt+down"], commands: ["editor.action.copyLinesDownAction"], src: copyLineDown },
   "Copy Line Up": { combos: ["shift+alt+up", "ctrl+shift+alt+up"], commands: ["editor.action.copyLinesUpAction"], src: copyLineUp },
   "Delete Line": { combos: ["ctrl+shift+k", "shift+cmd+k"], commands: ["editor.action.deleteLines"], src: deleteLine },
