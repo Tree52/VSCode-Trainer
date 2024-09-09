@@ -85,8 +85,7 @@
 
   $effect(() => {
     if (isSolved) {
-      result = "";
-      heldKeys = [];
+      reset();
       const currentTaskIndex = randomTaskIndex;
       while (currentTaskIndex === randomTaskIndex) randomTaskIndex = getRandomIntInclusive(0, keys.length - 1);
     }
