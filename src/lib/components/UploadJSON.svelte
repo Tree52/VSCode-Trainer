@@ -44,7 +44,5 @@
   };
 </script>
 
-<div class="p-2">
-  <label class="cursor-pointer" for="file-upload">Upload keybindings.json</label>
-  <input accept=".json" bind:files class="hidden" id="file-upload" {onchange} type="file" />
-</div>
+<label class="absolute left-2 cursor-pointer" for="file-upload">Upload keybindings.json</label>
+<input accept=".json" bind:files class="hidden" id="file-upload" {onchange} type="file" />

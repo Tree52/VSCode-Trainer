@@ -2,7 +2,7 @@
   import { browser } from "$app/environment";
   import { codeToKey } from "$lib/codeToKey";
   import Header from "$lib/components/Header.svelte";
-  import { enterPressed } from "$lib/refs.svelte";
+  import { enterPressed, selectedTaskList } from "$lib/refs.svelte";
   import { tasks } from "$lib/tasks";
 
   import "../app.css";
@@ -28,16 +28,18 @@
   };
   // #endregion
 
-  const keys = [...tasks.keys()];
-  const values = [...tasks.values()];
   const os = getOS();
 
-  let randomTaskIndex = $state(getRandomIntInclusive(0, keys.length - 1));
   let numNonModifierKeysPressed = 0;
+  let randomTaskIndex = $state(0);
   let isLoading = $state(false);
-  let heldKeys: string[] = [];
   let result = $state("");
+  let heldKeys = [""];
   let time = 0;
+
+  const filteredEntries = $derived([...tasks.entries()].filter(([, value]) => value.list === selectedTaskList.v));
+  const values = $derived(filteredEntries.map(([, value]) => value));
+  const keys = $derived(filteredEntries.map(([key]) => key));
 
   const randomTask = $derived({ combos: values[randomTaskIndex].combos, key: keys[randomTaskIndex], src: values[randomTaskIndex].src });
   const isSolved = $derived(randomTask.combos.includes(result));
@@ -84,11 +86,15 @@
 
   const onkeyup = (e: KeyboardEvent) => { heldKeys = heldKeys.filter(code => code !== e.code); };
 
+  // Need this b/c otherwise "Uncaught TypeError: $.get(...)[$.get(...)] is undefined"
+  // when switching from a big list to a small list and randomTaskIndex is out of bounds.
+  $effect(() => { if (!enterPressed.v) randomTaskIndex = 0; });
+
   $effect(() => {
     if (isSolved) {
       reset();
       const currentTaskIndex = randomTaskIndex;
-      while (currentTaskIndex === randomTaskIndex) randomTaskIndex = getRandomIntInclusive(0, keys.length - 1);
+      while (currentTaskIndex === randomTaskIndex) randomTaskIndex = getRandomIntInclusive(0, filteredEntries.length - 1);
     }
   });
 </script>
@@ -114,7 +120,9 @@
       {randomTask.key}
     </div>
     <div class="flex w-1/2 items-center justify-center p-2">
-      <video autoplay class:isLoading loop muted oncanplay={() => { isLoading = false; }} onloadstart={() => { isLoading = true; }} src={randomTask.src}></video>
+      {#if randomTask.src !== ""}
+        <video autoplay class:isLoading loop muted oncanplay={() => { isLoading = false; }} onloadstart={() => { isLoading = true; }} src={randomTask.src}></video>
+      {/if}
       {#if isLoading}
         <div class="spinner"></div>
       {/if}
