@@ -2,7 +2,8 @@
   import { browser } from "$app/environment";
   import { codeToKey } from "$lib/codeToKey";
   import Header from "$lib/components/Header.svelte";
-  import { enterPressed, tasks } from "$lib/refs.svelte";
+  import { enterPressed } from "$lib/refs.svelte";
+  import { tasks } from "$lib/tasks";
 
   import "../app.css";
 
@@ -27,8 +28,8 @@
   };
   // #endregion
 
-  const keys = [...tasks.v.keys()];
-  const values = [...tasks.v.values()];
+  const keys = [...tasks.keys()];
+  const values = [...tasks.values()];
   const os = getOS();
 
   let randomTaskIndex = $state(getRandomIntInclusive(0, keys.length - 1));
