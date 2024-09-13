@@ -109,30 +109,20 @@
   </a>
 </div>
 
-<main class="flex flex-1 flex-col items-center justify-center">
+<main class="flex flex-1 flex-col items-center justify-center gap-2">
   {#if !enterPressed.v}
     <button class="border-2 border-white px-2 py-1 text-3xl font-bold" onclick={() => { enterPressed.v = true; }}>Enter</button>
   {:else}
-    <div class="text-white">
-      {result}
-    </div>
-    <div>
-      {randomTask.key}
-    </div>
-    <div class="flex w-1/2 items-center justify-center p-2">
-      {#if randomTask.src !== ""}
-        <video autoplay class:isLoading loop muted oncanplay={() => { isLoading = false; }} onloadstart={() => { isLoading = true; }} src={randomTask.src}></video>
-      {/if}
-      {#if isLoading}
-        <div class="spinner"></div>
-      {/if}
-    </div>
-    <div class="bg-white hover:bg-primary-color">
-      {randomTask.combos.map(combo => `"${combo}"`).join(" ")}
-    </div>
-    <div class="p-2">
-      <button onclick={onSolved}>Skip</button>
-    </div>
+    <div>{result}</div>
+    <div>{randomTask.key}</div>
+    {#if randomTask.src !== ""}
+      <video autoplay class="w-1/2" class:isLoading loop muted oncanplay={() => { isLoading = false; }} onloadstart={() => { isLoading = true; }} src={randomTask.src}></video>
+    {/if}
+    {#if isLoading}
+      <div class="spinner"></div>
+    {/if}
+    <div class="bg-white hover:bg-primary-color">{randomTask.combos.map(combo => `"${combo}"`).join(" ")}</div>
+    <button onclick={onSolved}>Skip</button>
   {/if}
 </main>
 
