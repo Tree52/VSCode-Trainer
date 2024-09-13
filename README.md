@@ -1,6 +1,6 @@
 # VSCode Trainer
 
-A hotkey trainer for VSCode.
+A hotkey trainer for VSCode based on: https://code.visualstudio.com/docs/getstarted/keybindings#_default-keyboard-shortcuts
 
 https://tree52.github.io/VSCode-Trainer/
 
