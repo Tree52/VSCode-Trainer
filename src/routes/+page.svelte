@@ -1,6 +1,6 @@
 <script lang="ts">
   import { browser } from "$app/environment";
-  import { codeToKeyMap } from "$lib/codeToKey";
+  import { codeToKey } from "$lib/codeToKey";
   import Header from "$lib/components/Header.svelte";
   import { enterPressed, tasks } from "$lib/refs.svelte";
 
@@ -54,7 +54,7 @@
         case "Windows": _result.push("win"); break;
       }
     }
-    if (!isModifierKey(code)) _result.push(codeToKeyMap[code]);
+    if (!isModifierKey(code)) _result.push(codeToKey.get(code)!);
 
     return _result.join("+");
   };
