@@ -1,0 +1,7 @@
+32 bpm.
+Using OBS MPEG-4 (.mp4) output.
+Hotkey "Pause" on Start Recording and Stop Recording.
+Max zoom in vscode.
+1440p.
+
+Example: "Pause", action, "Pause"

@@ -1,1 +1,0 @@
-import{c as r,a as f}from"../chunks/disclose-version.D5vf0MEI.js";import{q as i,t as o,C as d}from"../chunks/runtime.BoHI-cDc.js";function l(n,t,e,a){i&&o(),t===void 0||t(n,e)}function s(n){var e;var t=(e=n.$$slots)==null?void 0:e.default;return t===!0?n.children:t}function m(n,t){var e=r(),a=d(e);l(a,s(t),{}),f(n,e)}export{m as component};
