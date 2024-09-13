@@ -1,285 +1,153 @@
-Catagory	Shortcut	Description
-Basic editing	Ctrl+K Ctrl+C	Add line comment
-Basic editing	⌘K ⌘C	Add line comment
-Basic editing	Ctrl+C	Copy line (empty selection)
-Basic editing	⌘C	Copy line (empty selection)
-Basic editing	⇧⌥↓ / ⇧⌥↑	Copy line down/up
-Basic editing	Shift+Alt + ↓ / ↑	Copy line up/down
-Basic editing	Ctrl+X	Cut line (empty selection)
-Basic editing	⌘X	Cut line (empty selection)
-Basic editing	Ctrl+Shift+K	Delete line
-Basic editing	⇧⌘K	Delete line
-Basic editing	Ctrl+K Ctrl+0 / Ctrl+K Ctrl+J	Fold/Unfold all regions
-Basic editing	⌘K ⌘0 / ⌘K ⌘J	Fold/unfold all regions
-Basic editing	Ctrl+K Ctrl+ [ / ]	Fold/unfold all subregions
-Basic editing	⌘K ⌘[ / ⌘K ⌘]	Fold/unfold all subregions
-Basic editing	Ctrl+Shift+ [ / ]	Fold/unfold region
-Basic editing	⌥⌘[ / ⌥⌘]	Fold/unfold region
-Basic editing	Ctrl+Home	Go to beginning of file
-Basic editing	Ctrl+ Home / End	Go to beginning/end of file
-Basic editing	⌘↑ / ⌘↓	Go to beginning/end of file
-Basic editing	Home / End	Go to beginning/end of line
-Basic editing	Ctrl+End	Go to end of file
-Basic editing	Ctrl+] / Ctrl+[	Indent/Outdent line
-Basic editing	⌘] / ⌘[	Indent/outdent line
-Basic editing	Ctrl+] / [	Indent/outdent line
-Basic editing	Ctrl+Shift+Enter	Insert line above
-Basic editing	Ctrl+Enter	Insert line below
-Basic editing	Ctrl+Enter / Ctrl+Shift+Enter	Insert line below/ above
-Basic editing	⌘Enter / ⇧⌘Enter	Insert line below/above
-Basic editing	Ctrl+Shift+\	Jump to matching bracket
-Basic editing	⇧⌘\	Jump to matching bracket
-Basic editing	Alt+ ↓ / ↑	Move line down/up
-Basic editing	⌥↓ / ⌥↑	Move line down/up
-Basic editing	Alt+ ↑ / ↓	Move line up/down
-Basic editing	Ctrl+K Ctrl+U	Remove line comment
-Basic editing	⌘K ⌘U	Remove line comment
-Basic editing	Ctrl+ ↑ / ↓	Scroll line up/down
-Basic editing	⌃PgUp / ⌃PgDn	Scroll line up/down
-Basic editing	Ctrl+↑ / ↓	Scroll line up/down
-Basic editing	Alt+ PgUp / PgDn	Scroll page up/down
-Basic editing	⌘PgUp /⌘PgDn	Scroll page up/down
-Basic editing	Ctrl+Shift+A	Toggle block comment
-Basic editing	⇧⌥A	Toggle block comment
-Basic editing	Ctrl+/	Toggle line comment
-Basic editing	⌘/	Toggle line comment
-Basic editing	Ctrl+M	Toggle Tab moves focus
-Basic editing	Alt+Z	Toggle word wrap
-Basic editing	⌥Z	Toggle word wrap
-Debug	Ctrl+K Ctrl+I	Show hover
-Debug	⌘K ⌘I	Show hover
-Debug	F5	Start / Continue
-Debug	F5	Start/Continue
-Debug	F11 / ⇧F11	Step into/ out
-Debug	F11 / Shift+F11	Step into/out
-Debug	F10	Step over
-Debug	Shift+F5	Stop
-Debug	⇧F5	Stop
-Debug	F9	Toggle breakpoint
-Display	Ctrl+Shift+V	Open Markdown preview
-Display	⇧⌘V	Open Markdown preview
-Display	Ctrl+K V	Open Markdown preview to the side
-Display	⌘K V	Open Markdown preview to the side
-Display	Ctrl+Shift+C	Open new command prompt/terminal
-Display	Ctrl+Shift+H	Replace in files
-Display	⇧⌘H	Replace in files
-Display	Ctrl+Shift+D	Show Debug
-Display	⇧⌘D	Show Debug
-Display	Ctrl+Shift+E	Show Explorer / Toggle focus
-Display	⇧⌘E	Show Explorer / Toggle focus
-Display	Ctrl+Shift+X	Show Extensions
-Display	⇧⌘X	Show Extensions
-Display	Ctrl+K Ctrl+H	Show Output panel
-Display	⇧⌘U	Show Output panel
-Display	Ctrl+Shift+U	Show Output panel
-Display	Ctrl+Shift+F	Show Search
-Display	⇧⌘F	Show Search
-Display	Ctrl+Shift+G	Show Source Control
-Display	⌃⇧G	Show Source Control
-Display	Shift+Alt+0	Toggle editor layout (horizontal/vertical)
-Display	⌥⌘0	Toggle editor layout (horizontal/vertical)
-Display	F11	Toggle full screen
-Display	⌃⌘F	Toggle full screen
-Display	Ctrl+Shift+J	Toggle Search details
-Display	⇧⌘J	Toggle Search details
-Display	Ctrl+B	Toggle Sidebar visibility
-Display	⌘B	Toggle Sidebar visibility
-Display	Ctrl+K Z	Zen Mode (Esc Esc to exit)
-Display	⌘K Z	Zen Mode (Esc Esc to exit)
-Display	Ctrl+ = / -	Zoom in/out
-Display	⌘= / ⇧⌘-	Zoom in/out
-Editor management	Ctrl+W	Close editor
-Editor management	⌘W	Close editor
-Editor management	Ctrl+F4 or Ctrl+W	Close editor
-Editor management	Ctrl+K F	Close folder
-Editor management	⌘K F	Close folder
-Editor management	Ctrl+ 1 / 2 / 3	Focus into 1st 2nd or 3rd editor group
-Editor management	Ctrl+ 1 / 2 / 3	Focus into 1st, 2nd, 3rd editor group
-Editor management	⌘1 / ⌘2 / ⌘3	Focus into 1st, 2nd, 3rd editor group
-Editor management	Ctrl+K Ctrl + →	Focus into next editor group
-Editor management	Ctrl+K Ctrl + ←	Focus into previous editor group
-Editor management	⌘K ⌘← / ⌘K ⌘→	Focus into previous/next editor group
-Editor management	Ctrl+K Ctrl+ ←/→	Focus into previous/next editor group
-Editor management	⌘K ← / ⌘K →	Move active editor group
-Editor management	Ctrl+K ← / →	Move active editor group
-Editor management	Ctrl+K ←	Move active editor group left/up
-Editor management	Ctrl+K →	Move active editor group right/down
-Editor management	Ctrl+Shift+PgUp	Move editor left
-Editor management	⌘K ⇧⌘← / ⌘K ⇧⌘→	Move editor left/right
-Editor management	Ctrl+Shift+PgUp / PgDn	Move editor left/right
-Editor management	Ctrl+Shift+PgDn	Move editor right
-Editor management	Ctrl+\	Split editor
-Editor management	⌘\	Split editor
-File management	Ctrl+W	Close
-File management	⌘W	Close
-File management	Ctrl+F4	Close
-File management	Ctrl+K Ctrl+W	Close All
-File management	⌘K ⌘W	Close All
-File management	Ctrl+K P	Copy path of active file
-File management	⌘K P	Copy path of active file
-File management	Ctrl+K Enter	Keep preview mode editor open
-File management	⌘K Enter	Keep preview mode editor open
-File management	Ctrl+N	New File
-File management	⌘N	New File
-File management	Ctrl+O	Open File...
-File management	⌘O	Open File...
-File management	Ctrl+Tab	Open next
-File management	⌃Tab / ⌃⇧Tab	Open next / previous
-File management	Ctrl+Shift+Tab	Open previous
-File management	Ctrl+Shift+T	Reopen closed editor
-File management	⇧⌘T	Reopen closed editor
-File management	Ctrl+K R	Reveal active file in Explorer
-File management	⌘K R	Reveal active file in Finder
-File management	Ctrl+S	Save
-File management	⌘S	Save
-File management	⌥⌘S	Save All
-File management	Ctrl+K S	Save All
-File management	Ctrl+Shift+S	Save As...
-File management	⇧⌘S	Save As...
-File management	Ctrl+K O	Show active file in new window/instance
-File management	⌘K O	Show active file in new window/instance
-General	Ctrl+W	Close window/instance
-General	⌘W	Close window/instance
-General	Ctrl+Shift+W	Close window/instance
-General	Ctrl+K Ctrl+S	Keyboard Shortcuts
-General	⌘K ⌘S	Keyboard Shortcuts
-General	Ctrl+Shift+N	New window/instance
-General	⇧⌘N	New window/instance
-General	Ctrl+P	Quick Open Go to File…
-General	Ctrl+P	Quick Open, Go to File...
-General	⌘P	Quick Open, Go to File…
-General	Ctrl+Shift+P, F1	Show Command Palette
-General	⇧⌘P, F1	Show Command Palette
-General	Ctrl+Shift+P or F1	Show Command Palette
-General	Ctrl+,	User Settings
-General	⌘,	User Settings
-Integrated terminal	Ctrl+Shift+C	Copy selection
-Integrated terminal	⌘C	Copy selection
-Integrated terminal	Ctrl+C	Copy selection
-Integrated terminal	Ctrl+Shift+`	Create new terminal
-Integrated terminal	⌃⇧`	Create new terminal
-Integrated terminal	Ctrl+Shift+V	Paste into active terminal
-Integrated terminal	Ctrl+V	Paste into active terminal
-Integrated terminal	Shift+ PgUp / PgDn	Scroll page up/down
-Integrated terminal	PgUp / PgDn	Scroll page up/down
-Integrated terminal	Shift+PgUp / PgDn	Scroll page up/down
-Integrated terminal	Shift+ Home / End	Scroll to top/bottom
-Integrated terminal	⌘Home / End	Scroll to top/bottom
-Integrated terminal	Ctrl+Home / End	Scroll to top/bottom
-Integrated terminal	Ctrl+Shift+ ↑ / ↓	Scroll up/down
-Integrated terminal	⌘↑ / ↓	Scroll up/down
-Integrated terminal	Ctrl+↑ / ↓	Scroll up/down
-Integrated terminal	Ctrl+`	Show integrated terminal
-Integrated terminal	⌃`	Show integrated terminal
-Multi-cursor and selection	Shift+Alt + drag mouse	Column (box) selection
-Multi-cursor and selection	⇧⌥ + drag mouse	Column (box) selection
-Multi-cursor and selection	Shift+Alt + (drag mouse)	Column (box) selection
-Multi-cursor and selection	Ctrl+Shift+Alt + (arrow key)	Column (box) selection
-Multi-cursor and selection	⇧⌥⌘← / →	Column (box) selection left/right
-Multi-cursor and selection	⇧⌥⌘PgDn	Column (box) selection page down
-Multi-cursor and selection	⇧⌥⌘PgUp	Column (box) selection page up
-Multi-cursor and selection	Ctrl+Shift+Alt +PgUp/PgDn	Column (box) selection page up/down
-Multi-cursor and selection	⇧⌥⌘↑ / ↓	Column (box) selection up/down
-Multi-cursor and selection	⌃⇧⌘→ / ←	Expand / shrink selection
-Multi-cursor and selection	Shift+Alt + →	Expand selection
-Multi-cursor and selection	Shift+Alt+→	Expand selection
-Multi-cursor and selection	⌥ + click	Insert cursor
-Multi-cursor and selection	Alt+Click	Insert cursor
-Multi-cursor and selection	⌥⌘↑	Insert cursor above
-Multi-cursor and selection	Ctrl+Alt+ ↑ / ↓	Insert cursor above / below
-Multi-cursor and selection	Shift+Alt+ ↑ / ↓	Insert cursor above/below
-Multi-cursor and selection	Shift+Alt+I	Insert cursor at end of each line selected
-Multi-cursor and selection	⇧⌥I	Insert cursor at end of each line selected
-Multi-cursor and selection	⌥⌘↓	Insert cursor below
-Multi-cursor and selection	Alt+Click	Insert cursor*
-Multi-cursor and selection	Alt+PgUp / PgDn	Scroll page up/down
-Multi-cursor and selection	Ctrl+Shift+L	Select all occurrences of current selection
-Multi-cursor and selection	⇧⌘L	Select all occurrences of current selection
-Multi-cursor and selection	Ctrl+F2	Select all occurrences of current word
-Multi-cursor and selection	⌘F2	Select all occurrences of current word
-Multi-cursor and selection	Ctrl+L	Select current line
-Multi-cursor and selection	⌘L	Select current line
-Multi-cursor and selection	Shift+Alt + ←	Shrink selection
-Multi-cursor and selection	Shift+Alt+←	Shrink selection
-Multi-cursor and selection	Ctrl+U	Undo last cursor operation
-Multi-cursor and selection	⌘U	Undo last cursor operation
-Navigation	Ctrl+K M	Change file language
-Navigation	Shift+Alt+F	Format document
-Navigation	Ctrl+K Ctrl+F	Format selection
-Navigation	Ctrl+Alt+-	Go back
-Navigation	Alt+ ← / →	Go back / forward
-Navigation	⌃- / ⌃⇧-	Go back/forward
-Navigation	Ctrl+Shift+-	Go forward
-Navigation	F12	Go to Definition
-Navigation	Ctrl+P	Go to File...
-Navigation	⌘P	Go to File...
-Navigation	Ctrl+G	Go to Line...
-Navigation	⌃G	Go to Line...
-Navigation	F8	Go to next error or warning
-Navigation	F8 / ⇧F8	Go to next/previous error or warning
-Navigation	Shift+F8	Go to previous error or warning
-Navigation	Ctrl+Shift+O	Go to Symbol...
-Navigation	⇧⌘O	Go to Symbol...
-Navigation	Ctrl+Shift+Tab	Navigate editor group history
-Navigation	⌃⇧Tab	Navigate editor group history
-Navigation	Ctrl+K F12	Open Definition to the side
-Navigation	Alt+F12	Peek Definition
-Navigation	Ctrl+.	Quick Fix
-Navigation	F2	Rename Symbol
-Navigation	Ctrl+T	Show all Symbols
-Navigation	⌘T	Show all Symbols
-Navigation	Ctrl+Shift+M	Show Problems panel
-Navigation	⇧⌘M	Show Problems panel
-Navigation	Shift+F12	Show References
-Navigation	Ctrl+M	Toggle Tab moves focus
-Navigation	⌃⇧M	Toggle Tab moves focus
-Navigation	Ctrl+Shift+Space	Trigger parameter hints
-Navigation	Ctrl+Space or Ctrl+I	Trigger suggestion
-Navigation	Ctrl+K Ctrl+X	Trim trailing whitespace
-Rich languages editing	Ctrl+K Ctrl+C	Add line comment
-Rich languages editing	Ctrl+K M	Change file language
-Rich languages editing	⌘K M	Change file language
-Rich languages editing	Ctrl+K Ctrl+0	Fold (collapse) all regions
-Rich languages editing	Ctrl+K Ctrl+[	Fold (collapse) all subregions
-Rich languages editing	Ctrl+Shift+[	Fold (collapse) region
-Rich languages editing	Ctrl+Shift+I	Format document
-Rich languages editing	⇧⌥F	Format document
-Rich languages editing	Ctrl+K Ctrl+F	Format selection
-Rich languages editing	⌘K ⌘F	Format selection
-Rich languages editing	F12	Go to Definition
-Rich languages editing	Ctrl+K F12	Open Definition to the side
-Rich languages editing	⌘K F12	Open Definition to the side
-Rich languages editing	Ctrl+Shift+F10	Peek Definition
-Rich languages editing	⌥F12	Peek Definition
-Rich languages editing	Ctrl+.	Quick Fix
-Rich languages editing	⌘.	Quick Fix
-Rich languages editing	Ctrl+K Ctrl+U	Remove line comment
-Rich languages editing	F2	Rename Symbol
-Rich languages editing	Shift+F12	Show References
-Rich languages editing	⇧F12	Show References
-Rich languages editing	Shift+Alt+A	Toggle block comment
-Rich languages editing	Ctrl+/	Toggle line comment
-Rich languages editing	Alt+Z	Toggle word wrap
-Rich languages editing	Ctrl+Shift+Space	Trigger parameter hints
-Rich languages editing	⇧⌘Space	Trigger parameter hints
-Rich languages editing	Ctrl+Space, Ctrl+I	Trigger suggestion
-Rich languages editing	⌃Space, ⌘I	Trigger suggestion
-Rich languages editing	Ctrl+K Ctrl+X	Trim trailing whitespace
-Rich languages editing	⌘K ⌘X	Trim trailing whitespace
-Rich languages editing	Ctrl+K Ctrl+J	Unfold (uncollapse) all regions
-Rich languages editing	Ctrl+K Ctrl+]	Unfold (uncollapse) all subregions
-Rich languages editing	Ctrl+Shift+]	Unfold (uncollapse) region
-Search and replace	Ctrl+D	Add selection to next Find match
-Search and replace	⌘D	Add selection to next Find match
-Search and replace	Ctrl+F	Find
-Search and replace	⌘F	Find
-Search and replace	F3 / Shift+F3	Find next/previous
-Search and replace	⌘G / ⇧⌘G	Find next/previous
-Search and replace	Ctrl+K Ctrl+D	Move last selection to next Find match
-Search and replace	⌘K ⌘D	Move last selection to next Find match
-Search and replace	Ctrl+H	Replace
-Search and replace	⌥⌘F	Replace
-Search and replace	Alt+Enter	Select all occurences of Find match
-Search and replace	Alt+Enter	Select all occurrences of Find match
-Search and replace	⌥Enter	Select all occurrences of Find match
-Search and replace	Alt+C / R / W	Toggle case-sensitive / regex / whole word
+Cut line (empty selection)	cmd+x ctrl+x	editor.action.clipboardCutAction	⌘X (Windows, Linux Ctrl+X)	Basic Editing
+Copy line (empty selection)	cmd+c ctrl+c	editor.action.clipboardCopyAction	⌘C (Windows, Linux Ctrl+C)	
+Paste	cmd+v ctrl+v	editor.action.clipboardPasteAction	⌘V (Windows, Linux Ctrl+V)	
+Delete Line	shift+cmd+k ctrl+shift+k	editor.action.deleteLines	⇧⌘K (Windows, Linux Ctrl+Shift+K)	
+Insert Line Below	cmd+enter ctrl+enter	editor.action.insertLineAfter	⌘Enter (Windows, Linux Ctrl+Enter)	
+Insert Line Above	shift+cmd+enter ctrl+shift+enter	editor.action.insertLineBefore	⇧⌘Enter (Windows, Linux Ctrl+Shift+Enter)	
+Move Line Down	alt+down	editor.action.moveLinesDownAction	⌥↓ (Windows, Linux Alt+Down)	
+Move Line Up	alt+up	editor.action.moveLinesUpAction	⌥↑ (Windows, Linux Alt+Up)	
+Copy Line Down	shift+alt+down ctrl+shift+alt+down	editor.action.copyLinesDownAction	⇧⌥↓ (Windows Shift+Alt+Down, Linux Ctrl+Shift+Alt+Down)	
+Copy Line Up	shift+alt+up ctrl+shift+alt+up	editor.action.copyLinesUpAction	⇧⌥↑ (Windows Shift+Alt+Up, Linux Ctrl+Shift+Alt+Up)	
+Undo	cmd+z ctrl+z	undo	⌘Z (Windows, Linux Ctrl+Z)	
+Redo	shift+cmd+z ctrl+y	redo	⇧⌘Z (Windows, Linux Ctrl+Y)	
+Add Selection To Next Find Match	cmd+d ctrl+d	editor.action.addSelectionToNextFindMatch	⌘D (Windows, Linux Ctrl+D)	
+Move Last Selection To Next Find Match	`cmd+k cmd+d` `ctrl+k ctrl+d`	editor.action.moveSelectionToNextFindMatch	⌘K ⌘D (Windows, Linux Ctrl+K Ctrl+D)	
+Undo last cursor operation	cmd+u ctrl+u	cursorUndo	⌘U (Windows, Linux Ctrl+U)	
+Insert cursor at end of each line selected	shift+alt+i	editor.action.insertCursorAtEndOfEachLineSelected	⇧⌥I (Windows, Linux Shift+Alt+I)	
+Select all occurrences of current selection	shift+cmd+l ctrl+shift+l	editor.action.selectHighlights	⇧⌘L (Windows, Linux Ctrl+Shift+L)	
+Select all occurrences of current word	cmd+f2 ctrl+f2	editor.action.changeAll	⌘F2 (Windows, Linux Ctrl+F2)	
+Select current line	cmd+l ctrl+l	expandLineSelection	⌘L (Windows, Linux Ctrl+L)	
+Insert Cursor Below	alt+cmd+down ctrl+alt+down shift+alt+down	editor.action.insertCursorBelow	⌥⌘↓ (Windows Ctrl+Alt+Down, Linux Shift+Alt+Down)	
+Insert Cursor Above	alt+cmd+up ctrl+alt+up shift+alt+up	editor.action.insertCursorAbove	⌥⌘↑ (Windows Ctrl+Alt+Up, Linux Shift+Alt+Up)	
+Jump to matching bracket	shift+cmd+\ ctrl+shift+\	editor.action.jumpToBracket	⇧⌘\ (Windows, Linux Ctrl+Shift+\)	
+Indent Line	cmd+] ctrl+]	editor.action.indentLines	⌘] (Windows, Linux Ctrl+])	
+Outdent Line	cmd+[ ctrl+[	editor.action.outdentLines	⌘[ (Windows, Linux Ctrl+[)	
+Go to Beginning of Line	home	cursorHome	Home	
+Go to End of Line	end	cursorEnd	End	
+Go to End of File	cmd+down ctrl+end	cursorBottom	⌘↓ (Windows, Linux Ctrl+End)	
+Go to Beginning of File	cmd+up ctrl+home	cursorTop	⌘↑ (Windows, Linux Ctrl+Home)	
+Scroll Line Down	ctrl+pagedown ctrl+down	scrollLineDown	⌃PageDown (Windows, Linux Ctrl+Down)	
+Scroll Line Up	ctrl+pageup ctrl+up	scrollLineUp	⌃PageUp (Windows, Linux Ctrl+Up)	
+Scroll Page Down	cmd+pagedown alt+pagedown	scrollPageDown	⌘PageDown (Windows, Linux Alt+PageDown)	
+Scroll Page Up	cmd+pageup alt+pageup	scrollPageUp	⌘PageUp (Windows, Linux Alt+PageUp)	
+Fold (collapse) region	alt+cmd+[ ctrl+shift+[	editor.fold	⌥⌘[ (Windows, Linux Ctrl+Shift+[)	
+Unfold (uncollapse) region	alt+cmd+] ctrl+shift+]	editor.unfold	⌥⌘] (Windows, Linux Ctrl+Shift+])	
+Toggle Fold region	`cmd+k cmd+l` `ctrl+k ctrl+l`	editor.toggleFold	⌘K ⌘L (Windows, Linux Ctrl+K Ctrl+L)	
+Fold (collapse) all subregions	`cmd+k cmd+[` `ctrl+k ctrl+[`	editor.foldRecursively	⌘K ⌘[ (Windows, Linux Ctrl+K Ctrl+[)	
+Unfold (uncollapse) all subregions	`cmd+k cmd+]` `ctrl+k ctrl+]`	editor.unfoldRecursively	⌘K ⌘] (Windows, Linux Ctrl+K Ctrl+])	
+Fold (collapse) all regions	`cmd+k cmd+0` `ctrl+k ctrl+0`	editor.foldAll	⌘K ⌘0 (Windows, Linux Ctrl+K Ctrl+0)	
+Unfold (uncollapse) all regions	`cmd+k cmd+j` `ctrl+k ctrl+j`	editor.unfoldAll	⌘K ⌘J (Windows, Linux Ctrl+K Ctrl+J)	
+Add Line Comment	`cmd+k cmd+c` `ctrl+k ctrl+c`	editor.action.addCommentLine	⌘K ⌘C (Windows, Linux Ctrl+K Ctrl+C)	
+Remove Line Comment	`cmd+k cmd+u` `ctrl+k ctrl+u`	editor.action.removeCommentLine	⌘K ⌘U (Windows, Linux Ctrl+K Ctrl+U)	
+Toggle Line Comment	cmd+/ ctrl+/	editor.action.commentLine	⌘/ (Windows, Linux Ctrl+/)	
+Toggle Block Comment	shift+alt+a ctrl+shift+a	editor.action.blockComment	⇧⌥A (Windows Shift+Alt+A, Linux Ctrl+Shift+A)	
+Find	cmd+f ctrl+f	actions.find	⌘F (Windows, Linux Ctrl+F)	
+Replace	alt+cmd+f ctrl+h	editor.action.startFindReplaceAction	⌥⌘F (Windows, Linux Ctrl+H)	
+Find Next	enter	editor.action.nextMatchFindAction	Enter	
+Find Previous	shift+enter	editor.action.previousMatchFindAction	⇧Enter (Windows, Linux Shift+Enter)	
+Select All Occurrences of Find Match	alt+enter	editor.action.selectAllMatches	⌥Enter (Windows, Linux Alt+Enter)	
+Toggle Find Case Sensitive	alt+cmd+c alt+c	toggleFindCaseSensitive	⌥⌘C (Windows, Linux Alt+C)	
+Toggle Find Regex	alt+cmd+r alt+r	toggleFindRegex	⌥⌘R (Windows, Linux Alt+R)	
+Toggle Find Whole Word	alt+cmd+w alt+w	toggleFindWholeWord	⌥⌘W (Windows, Linux Alt+W)	
+Toggle Use of Tab Key for Setting Focus	ctrl+shift+m ctrl+m	editor.action.toggleTabFocusMode	⌃⇧M (Windows, Linux Ctrl+M)	
+Toggle Word Wrap	alt+z	editor.action.toggleWordWrap	⌥Z (Windows, Linux Alt+Z)	
+Trigger Suggest	ctrl+space	editor.action.triggerSuggest	⌃Space (Windows, Linux Ctrl+Space)	Rich Languages Editing
+Trigger Parameter Hints	shift+cmd+space ctrl+shift+space	editor.action.triggerParameterHints	⇧⌘Space (Windows, Linux Ctrl+Shift+Space)	
+Format Document	shift+alt+f ctrl+shift+i	editor.action.formatDocument	⇧⌥F (Windows Shift+Alt+F, Linux Ctrl+Shift+I)	
+Format Selection	`cmd+k cmd+f` `ctrl+k ctrl+f`	editor.action.formatSelection	⌘K ⌘F (Windows, Linux Ctrl+K Ctrl+F)	
+Go to Definition	f12	editor.action.revealDefinition	F12	
+Show Hover	`cmd+k cmd+i` `ctrl+k ctrl+i`	editor.action.showHover	⌘K ⌘I (Windows, Linux Ctrl+K Ctrl+I)	
+Peek Definition	alt+f12 ctrl+shift+f10	editor.action.peekDefinition	⌥F12 (Windows Alt+F12, Linux Ctrl+Shift+F10)	
+Open Definition to the Side	`cmd+k f12` `ctrl+k f12`	editor.action.revealDefinitionAside	⌘K F12 (Windows, Linux Ctrl+K F12)	
+Quick Fix	cmd+. ctrl+.	editor.action.quickFix	⌘. (Windows, Linux Ctrl+.)	
+Go to References	shift+f12	editor.action.goToReferences	⇧F12 (Windows, Linux Shift+F12)	
+Rename Symbol	f2	editor.action.rename	F2	
+Replace with Next Value	shift+cmd+. ctrl+shift+.	editor.action.inPlaceReplace.down	⇧⌘. (Windows, Linux Ctrl+Shift+.)	
+Replace with Previous Value	shift+cmd+, ctrl+shift+,	editor.action.inPlaceReplace.up	⇧⌘, (Windows, Linux Ctrl+Shift+,)	
+Expand AST Selection	ctrl+shift+cmd+right shift+alt+right	editor.action.smartSelect.expand	⌃⇧⌘→ (Windows, Linux Shift+Alt+Right)	
+Shrink AST Selection	ctrl+shift+cmd+left shift+alt+left	editor.action.smartSelect.shrink	⌃⇧⌘← (Windows, Linux Shift+Alt+Left)	
+Trim Trailing Whitespace	`cmd+k cmd+x` `ctrl+k ctrl+x`	editor.action.trimTrailingWhitespace	⌘K ⌘X (Windows, Linux Ctrl+K Ctrl+X)	
+Change Language Mode	`cmd+k m` `ctrl+k m`	workbench.action.editor.changeLanguageMode	⌘K M (Windows, Linux Ctrl+K M)	
+Show All Symbols	cmd+t ctrl+t	workbench.action.showAllSymbols	⌘T (Windows, Linux Ctrl+T)	Navigation
+Go to Line...	ctrl+g	workbench.action.gotoLine	⌃G (Windows, Linux Ctrl+G)	
+Go to File..., Quick Open	cmd+p ctrl+p	workbench.action.quickOpen	⌘P (Windows, Linux Ctrl+P)	
+Go to Symbol...	shift+cmd+o ctrl+shift+o	workbench.action.gotoSymbol	⇧⌘O (Windows, Linux Ctrl+Shift+O)	
+Show Problems	shift+cmd+m ctrl+shift+m	workbench.actions.view.problems	⇧⌘M (Windows, Linux Ctrl+Shift+M)	
+Go to Next Error or Warning	f8	editor.action.marker.nextInFiles	F8	
+Go to Previous Error or Warning	shift+f8	editor.action.marker.prevInFiles	⇧F8 (Windows, Linux Shift+F8)	
+Show All Commands	shift+cmd+p ctrl+shift+p f1	workbench.action.showCommands	⇧⌘P (Windows, Linux Ctrl+Shift+P) or F1	
+Navigate Editor Group History	ctrl+tab	workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup	⌃Tab (Windows, Linux Ctrl+Tab)	
+Go Back	ctrl+- alt+left ctrl+alt+-	workbench.action.navigateBack	⌃- (Windows Alt+Left, Linux Ctrl+Alt+-)	
+Go back in Quick Input	ctrl+- alt+left ctrl+alt+-	workbench.action.quickInputBack	⌃- (Windows Alt+Left, Linux Ctrl+Alt+-)	
+Go Forward	alt+right ctrl+shift+-	workbench.action.navigateForward	⌃⇧- (Windows Alt+Right, Linux Ctrl+Shift+-)	
+Focus Breadcrumbs	shift+cmd+; ctrl+shift+;	breadcrumbs.focus	⇧⌘; (Windows, Linux Ctrl+Shift+;)	
+Focus and Select Breadcrumbs	shift+cmd+. ctrl+shift+.	breadcrumbs.focusAndSelect	⇧⌘. (Windows, Linux Ctrl+Shift+.)	
+New Window	shift+cmd+n ctrl+shift+n	workbench.action.newWindow	⇧⌘N (Windows, Linux Ctrl+Shift+N)	Editor/Window Management
+Close Window	cmd+w alt+f4	workbench.action.closeWindow	⌘W (Windows, Linux Alt+F4)	
+Close Editor	cmd+w ctrl+f4 ctrl+w	workbench.action.closeActiveEditor	⌘W (Windows Ctrl+F4, Linux Ctrl+W)	
+Close Folder	`cmd+k f` `ctrl+k f`	workbench.action.closeFolder	⌘K F (Windows, Linux Ctrl+K F)	
+Split Editor	cmd+\ ctrl+\	workbench.action.splitEditor	⌘\ (Windows, Linux Ctrl+\)	
+Focus into First Editor Group	cmd+1 ctrl+1	workbench.action.focusFirstEditorGroup	⌘1 (Windows, Linux Ctrl+1)	
+Focus into Second Editor Group	cmd+2 ctrl+2	workbench.action.focusSecondEditorGroup	⌘2 (Windows, Linux Ctrl+2)	
+Focus into Third Editor Group	cmd+3 ctrl+3	workbench.action.focusThirdEditorGroup	⌘3 (Windows, Linux Ctrl+3)	
+Move Editor Left	`cmd+k shift+cmd+left` ctrl+shift+pageup	workbench.action.moveEditorLeftInGroup	⌘K ⇧⌘← (Windows, Linux Ctrl+Shift+PageUp)	
+Move Editor Right	`cmd+k shift+cmd+right` ctrl+shift+pagedown	workbench.action.moveEditorRightInGroup	⌘K ⇧⌘→ (Windows, Linux Ctrl+Shift+PageDown)	
+Move Active Editor Group Left	`cmd+k left` `ctrl+k left`	workbench.action.moveActiveEditorGroupLeft	⌘K ← (Windows, Linux Ctrl+K Left)	
+Move Active Editor Group Right	`cmd+k right` `ctrl+k right`	workbench.action.moveActiveEditorGroupRight	⌘K → (Windows, Linux Ctrl+K Right)	
+Move Editor into Next Group	ctrl+cmd+right ctrl+alt+right	workbench.action.moveEditorToNextGroup	⌃⌘→ (Windows, Linux Ctrl+Alt+Right)	
+Move Editor into Previous Group	ctrl+cmd+left ctrl+alt+left	workbench.action.moveEditorToPreviousGroup	⌃⌘← (Windows, Linux Ctrl+Alt+Left)	
+New File	cmd+n ctrl+n	workbench.action.files.newUntitledFile	⌘N (Windows, Linux Ctrl+N)	File Management
+Open File...	cmd+o ctrl+o	workbench.action.files.openFile	⌘O (Windows, Linux Ctrl+O)	
+Save	cmd+s ctrl+s	workbench.action.files.save	⌘S (Windows, Linux Ctrl+S)	
+Save All	alt+cmd+s `ctrl+k s`	saveAll	⌥⌘S (Windows Ctrl+K S, Linux )	
+Save As...	shift+cmd+s ctrl+shift+s	workbench.action.files.saveAs	⇧⌘S (Windows, Linux Ctrl+Shift+S)	
+Close	cmd+w ctrl+f4 ctrl+w	workbench.action.closeActiveEditor	⌘W (Windows Ctrl+F4, Linux Ctrl+W)	
+Close Others	alt+cmd+t	workbench.action.closeOtherEditors	⌥⌘T (Windows, Linux )	
+Close Group	`cmd+k w` `ctrl+k w`	workbench.action.closeEditorsInGroup	⌘K W (Windows, Linux Ctrl+K W)	
+Close All	`cmd+k cmd+w` `ctrl+k ctrl+w`	workbench.action.closeAllEditors	⌘K ⌘W (Windows, Linux Ctrl+K Ctrl+W)	
+Reopen Closed Editor	shift+cmd+t ctrl+shift+t	workbench.action.reopenClosedEditor	⇧⌘T (Windows, Linux Ctrl+Shift+T)	
+Keep Open	`cmd+k enter` `ctrl+k enter`	workbench.action.keepEditor	⌘K Enter (Windows, Linux Ctrl+K Enter)	
+Copy Path of Active File	`cmd+k p` `ctrl+k p`	workbench.action.files.copyPathOfActiveFile	⌘K P (Windows, Linux Ctrl+K P)	
+Reveal Active File in Windows	`cmd+k r` `ctrl+k r`	workbench.action.files.revealActiveFileInWindows	⌘K R (Windows, Linux Ctrl+K R)	
+Toggle Full Screen	ctrl+cmd+f f11	workbench.action.toggleFullScreen	⌃⌘F (Windows, Linux F11)	Display
+Toggle Zen Mode	`cmd+k z` `ctrl+k z`	workbench.action.toggleZenMode	⌘K Z (Windows, Linux Ctrl+K Z)	
+Leave Zen Mode	`escape escape`	workbench.action.exitZenMode	Escape Escape	
+Zoom in	cmd+= ctrl+=	workbench.action.zoomIn	⌘= (Windows, Linux Ctrl+=)	
+Zoom out	cmd+- ctrl+-	workbench.action.zoomOut	⌘- (Windows, Linux Ctrl+-)	
+Reset Zoom	cmd+numpad0 ctrl+numpad0	workbench.action.zoomReset	⌘Numpad0 (Windows, Linux Ctrl+Numpad0)	
+Toggle Sidebar Visibility	cmd+b ctrl+b	workbench.action.toggleSidebarVisibility	⌘B (Windows, Linux Ctrl+B)	
+Show Explorer / Toggle Focus	shift+cmd+e ctrl+shift+e	workbench.view.explorer	⇧⌘E (Windows, Linux Ctrl+Shift+E)	
+Show Search	shift+cmd+f ctrl+shift+f	workbench.view.search	⇧⌘F (Windows, Linux Ctrl+Shift+F)	
+Show Source Control	ctrl+shift+g	workbench.view.scm	⌃⇧G (Windows, Linux Ctrl+Shift+G)	
+Show Run	shift+cmd+d ctrl+shift+d	workbench.view.debug	⇧⌘D (Windows, Linux Ctrl+Shift+D)	
+Show Extensions	shift+cmd+x ctrl+shift+x	workbench.view.extensions	⇧⌘X (Windows, Linux Ctrl+Shift+X)	
+Show Output	shift+cmd+u ctrl+shift+u `ctrl+k ctrl+h`	workbench.action.output.toggleOutput	⇧⌘U (Windows Ctrl+Shift+U, Linux Ctrl+K Ctrl+H)	
+Quick Open View	ctrl+q	workbench.action.quickOpenView	⌃Q (Windows Ctrl+Q, Linux )	
+Open New Command Prompt	shift+cmd+c ctrl+shift+c	workbench.action.terminal.openNativeConsole	⇧⌘C (Windows, Linux Ctrl+Shift+C)	
+Toggle Markdown Preview	shift+cmd+v ctrl+shift+v	markdown.showPreview	⇧⌘V (Windows, Linux Ctrl+Shift+V)	
+Open Preview to the Side	`cmd+k v` `ctrl+k v`	markdown.showPreviewToSide	⌘K V (Windows, Linux Ctrl+K V)	
+Toggle Integrated Terminal	ctrl+`	workbench.action.terminal.toggleTerminal	⌃` (Windows, Linux Ctrl+`)	
+Show Search	shift+cmd+f ctrl+shift+f	workbench.view.search	⇧⌘F (Windows, Linux Ctrl+Shift+F)	Search
+Replace in Files	shift+cmd+h ctrl+shift+h	workbench.action.replaceInFiles	⇧⌘H (Windows, Linux Ctrl+Shift+H)	
+Toggle Match Case	alt+cmd+c alt+c	toggleSearchCaseSensitive	⌥⌘C (Windows, Linux Alt+C)	
+Toggle Match Whole Word	alt+cmd+w alt+w	toggleSearchWholeWord	⌥⌘W (Windows, Linux Alt+W)	
+Toggle Use Regular Expression	alt+cmd+r alt+r	toggleSearchRegex	⌥⌘R (Windows, Linux Alt+R)	
+Toggle Search Details	shift+cmd+j ctrl+shift+j	workbench.action.search.toggleQueryDetails	⇧⌘J (Windows, Linux Ctrl+Shift+J)	
+Focus Next Search Result	f4	search.action.focusNextSearchResult	F4	
+Focus Previous Search Result	shift+f4	search.action.focusPreviousSearchResult	⇧F4 (Windows, Linux Shift+F4)	
+Show Next Search Term	down	history.showNext	↓ (Windows, Linux Down)	
+Show Previous Search Term	up	history.showPrevious	↑ (Windows, Linux Up)	
+Open Results In Editor	cmd+enter alt+enter	search.action.openInEditor	⌘Enter (Windows, Linux Alt+Enter)	Search Editor
+Focus Search Editor Input	escape	search.action.focusQueryEditorWidget	Escape	
+Search Again	shift+cmd+r ctrl+shift+r	rerunSearchEditorSearch	⇧⌘R (Windows, Linux Ctrl+Shift+R)	
+Delete File Results	shift+cmd+backspace ctrl+shift+backspace	search.searchEditor.action.deleteFileResults	⇧⌘Backspace (Windows, Linux Ctrl+Shift+Backspace)	
+Open Settings	cmd+, ctrl+,	workbench.action.openSettings	⌘, (Windows, Linux Ctrl+,)	Preferences
+Open Keyboard Shortcuts	`cmd+k cmd+s` `ctrl+k ctrl+s`	workbench.action.openGlobalKeybindings	⌘K ⌘S (Windows, Linux Ctrl+K Ctrl+S)	
+Select Color Theme	`cmd+k cmd+t` `ctrl+k ctrl+t`	workbench.action.selectTheme	⌘K ⌘T (Windows, Linux Ctrl+K Ctrl+T)	
+Toggle Breakpoint	f9	editor.debug.action.toggleBreakpoint	F9	Debug
+Start	f5	workbench.action.debug.start	F5	
+Continue	f5	workbench.action.debug.continue	F5	
+Start (without debugging)	ctrl+f5	workbench.action.debug.run	⌃F5 (Windows, Linux Ctrl+F5)	
+Pause	f6	workbench.action.debug.pause	F6	
+Step Into	f11	workbench.action.debug.stepInto	F11	
+Run Build Task	shift+cmd+b ctrl+shift+b	workbench.action.tasks.build	⇧⌘B (Windows, Linux Ctrl+Shift+B)	Tasks
