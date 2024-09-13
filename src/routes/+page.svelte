@@ -86,17 +86,17 @@
 
   const onkeyup = (e: KeyboardEvent) => { heldKeys = heldKeys.filter(code => code !== e.code); };
 
+  const onSolved = () => {
+    reset();
+    const currentTaskIndex = randomTaskIndex;
+    while (currentTaskIndex === randomTaskIndex) randomTaskIndex = getRandomIntInclusive(0, filteredEntries.length - 1);
+  };
+
   // Need this b/c otherwise "Uncaught TypeError: $.get(...)[$.get(...)] is undefined"
   // when switching from a big list to a small list and randomTaskIndex is out of bounds.
   $effect(() => { if (!enterPressed.v) randomTaskIndex = 0; });
 
-  $effect(() => {
-    if (isSolved) {
-      reset();
-      const currentTaskIndex = randomTaskIndex;
-      while (currentTaskIndex === randomTaskIndex) randomTaskIndex = getRandomIntInclusive(0, filteredEntries.length - 1);
-    }
-  });
+  $effect(() => { if (isSolved) onSolved(); });
 </script>
 
 <Header />
@@ -129,6 +129,9 @@
     </div>
     <div class="bg-white hover:bg-primary-color">
       {randomTask.combos.map(combo => `"${combo}"`).join(" ")}
+    </div>
+    <div class="p-2">
+      <button onclick={onSolved}>Skip</button>
     </div>
   {/if}
 </main>
