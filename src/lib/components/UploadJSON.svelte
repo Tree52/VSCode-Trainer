@@ -1,11 +1,9 @@
 <script lang="ts">
   import { tasks } from "$lib/refs.svelte";
 
-  const search2DArray = (array: string[][], target: string): [number, number] | null => {
+  const search2DArray = (array: string[][], target: string): null | number => {
     for (let row = 0; row < array.length; row++) {
-      for (let col = 0; col < array[row].length; col++) {
-        if (array[row][col] === target) return [row, col];
-      }
+      for (let col = 0; col < array[row].length; col++) if (array[row][col] === target) return row;
     }
 
     return null;
@@ -26,11 +24,11 @@
 
           let keyBindings: { command: string; key: string }[] = JSON.parse(fileContent);
 
-          const keys = Object.keys(tasks.v);
-          const commands = Object.values(tasks.v).map(task => task.commands);
+          const keys = [...tasks.v.keys()];
+          const commands = [...tasks.v.values()].map(value => value.commands);
           for (let i = 0; i < keyBindings.length; i++) {
-            const location = search2DArray(commands, keyBindings[i].command);
-            if (location !== null) tasks.v[keys[location[0]]].combos.push(keyBindings[i].key);
+            const commandIndex = search2DArray(commands, keyBindings[i].command);
+            if (commandIndex !== null) tasks.v.get(keys[commandIndex])!.combos.push(keyBindings[i].key);
           }
 
           alert("Custom keybindings added.");

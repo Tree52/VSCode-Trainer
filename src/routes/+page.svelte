@@ -27,8 +27,8 @@
   };
   // #endregion
 
-  const values = Object.values(tasks.v);
-  const keys = Object.keys(tasks.v);
+  const keys = [...tasks.v.keys()];
+  const values = [...tasks.v.values()];
   const os = getOS();
 
   let randomTaskIndex = $state(getRandomIntInclusive(0, keys.length - 1));
