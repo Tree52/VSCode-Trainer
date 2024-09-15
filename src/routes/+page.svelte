@@ -2,7 +2,7 @@
   import { browser } from "$app/environment";
   import { codeToKey } from "$lib/codeToKey";
   import Header from "$lib/components/Header.svelte";
-  import { enterPressed, selectedTaskList } from "$lib/refs.svelte";
+  import { enterPressed, isRandomized, selectedTaskList } from "$lib/refs.svelte";
   import { shortcuts } from "$lib/shortcuts";
 
   import "../app.css";
@@ -88,8 +88,13 @@
 
   const onSolved = () => {
     reset();
-    const currentTaskIndex = randomTaskIndex;
-    while (currentTaskIndex === randomTaskIndex) randomTaskIndex = getRandomIntInclusive(0, filteredEntries.length - 1);
+    if (isRandomized.v) {
+      const currentTaskIndex = randomTaskIndex;
+      while (currentTaskIndex === randomTaskIndex) randomTaskIndex = getRandomIntInclusive(0, filteredEntries.length - 1);
+    }
+    else {
+      randomTaskIndex === filteredEntries.length - 1 ? randomTaskIndex = 0 : randomTaskIndex++;
+    }
   };
 
   // Need this b/c otherwise "Uncaught TypeError: $.get(...)[$.get(...)] is undefined"

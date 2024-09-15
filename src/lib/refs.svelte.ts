@@ -11,3 +11,4 @@ const ref = <T>(initial: T) => {
 
 export const selectedTaskList = ref("Cursor Control");
 export const enterPressed = ref(false);
+export const isRandomized = ref(true);
