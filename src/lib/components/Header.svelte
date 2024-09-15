@@ -1,10 +1,11 @@
 <script lang="ts">
-  import List from "$lib/components/List.svelte"; import UploadJSON from "$lib/components/UploadJSON.svelte";
+  import ImportJSON from "$lib/components/ImportJSON.svelte";
+  import List from "$lib/components/List.svelte";
   import { enterPressed, isRandomized } from "$lib/refs.svelte";
 </script>
 
 {#if !enterPressed.v}
-  <UploadJSON />
+  <ImportJSON />
   <header class="flex flex-col items-center justify-center gap-1">
     <List />
     <div>

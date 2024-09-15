@@ -44,5 +44,5 @@
   };
 </script>
 
-<label class="absolute left-2 cursor-pointer" for="file-upload">Upload keybindings.json</label>
+<label class="absolute left-2 cursor-pointer" for="file-upload">Import keybindings.json</label>
 <input accept=".json" bind:files class="hidden" id="file-upload" {onchange} type="file" />
