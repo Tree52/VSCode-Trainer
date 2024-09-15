@@ -16,7 +16,7 @@ const cursorControl = new Map<string, Shortcut>([
   ["Go to End of File", { combos: ["cmd+down", "ctrl+end"], commands: ["cursorBottom"], list: "Cursor Control", src: "videos/cursorControl/cursorBottom.mp4" }],
   ["Go to End of Line", { combos: ["end"], commands: ["cursorEnd"], list: "Cursor Control", src: "videos/cursorControl/cursorEnd.mp4" }],
   ["Go to End of Word", { combos: ["alt+right", "ctrl+right"], commands: ["cursorWordRight"], list: "Cursor Control", src: "" }],
-  ["Go to File..., Quick Open", { combos: ["cmd+p", "ctrl+p, ctrl+e"], commands: ["workbench.action.quickOpen"], list: "Cursor Control", src: "" }],
+  ["Go to File..., Quick Open", { combos: ["cmd+p", "ctrl+p", "ctrl+e"], commands: ["workbench.action.quickOpen"], list: "Cursor Control", src: "" }],
   ["Go to Line...", { combos: ["ctrl+g"], commands: ["workbench.action.gotoLine"], list: "Cursor Control", src: "" }],
   ["Go to Symbol...", { combos: ["shift+cmd+o", "ctrl+shift+o"], commands: ["workbench.action.gotoSymbol"], list: "Cursor Control", src: "" }],
   ["Insert Cursor Above", { combos: ["alt+cmd+up", "ctrl+alt+up", "shift+alt+up"], commands: ["editor.action.insertCursorAbove"], list: "Cursor Control", src: "" }],
