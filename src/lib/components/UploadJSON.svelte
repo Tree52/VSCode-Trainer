@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { tasks } from "$lib/tasks";
+  import { shortcuts } from "$lib/shortcuts";
 
   const search2DArray = (array: string[][], target: string): null | number => {
     for (let row = 0; row < array.length; row++) {
@@ -24,11 +24,11 @@
 
           let keyBindings: { command: string; key: string }[] = JSON.parse(fileContent);
 
-          const keys = [...tasks.keys()];
-          const commands = [...tasks.values()].map(value => value.commands);
+          const keys = [...shortcuts.keys()];
+          const commands = [...shortcuts.values()].map(value => value.commands);
           for (let i = 0; i < keyBindings.length; i++) {
             const commandIndex = search2DArray(commands, keyBindings[i].command);
-            if (commandIndex !== null) tasks.get(keys[commandIndex])!.combos.push(keyBindings[i].key);
+            if (commandIndex !== null) shortcuts.get(keys[commandIndex])!.combos.push(keyBindings[i].key);
           }
 
           alert("Custom keybindings added.");

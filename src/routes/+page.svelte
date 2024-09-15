@@ -3,7 +3,7 @@
   import { codeToKey } from "$lib/codeToKey";
   import Header from "$lib/components/Header.svelte";
   import { enterPressed, selectedTaskList } from "$lib/refs.svelte";
-  import { tasks } from "$lib/tasks";
+  import { shortcuts } from "$lib/shortcuts";
 
   import "../app.css";
 
@@ -37,7 +37,7 @@
   let heldKeys = [""];
   let time = 0;
 
-  const filteredEntries = $derived([...tasks.entries()].filter(([, value]) => value.list === selectedTaskList.v));
+  const filteredEntries = $derived([...shortcuts.entries()].filter(([, value]) => value.list === selectedTaskList.v));
   const values = $derived(filteredEntries.map(([, value]) => value));
   const keys = $derived(filteredEntries.map(([key]) => key));
 

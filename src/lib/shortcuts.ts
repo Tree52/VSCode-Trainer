@@ -1,4 +1,4 @@
-type Task = {
+type Shortcut = {
   combos: string[];
   commands: string[];
   list: string;
@@ -9,7 +9,7 @@ type Task = {
 // Preferences: Open Default Keyboard Shortcuts (JSON)
 // https://github.com/codebling/vs-code-default-keybindings
 // #region shortcuts
-const basicEditing = new Map<string, Task>([
+const basicEditing = new Map<string, Shortcut>([
   ["Add Selection To Next Find Match", { combos: ["cmd+d", "ctrl+d"], commands: ["editor.action.addSelectionToNextFindMatch"], list: "Basic Editing", src: "" }],
   ["Copy line (empty selection)", { combos: ["cmd+c", "ctrl+c"], commands: ["editor.action.clipboardCopyAction"], list: "Basic Editing", src: "videos/basicEditing/clipboardCopyAction.mp4" }],
   ["Copy Line Down", { combos: ["shift+alt+down", "ctrl+shift+alt+down"], commands: ["editor.action.copyLinesDownAction"], list: "Basic Editing", src: "videos/basicEditing/copyLinesDownAction.mp4" }],
@@ -64,7 +64,7 @@ const basicEditing = new Map<string, Task>([
   ["Unfold (uncollapse) region", { combos: ["alt+cmd+]", "ctrl+shift+]"], commands: ["editor.unfold"], list: "Basic Editing", src: "videos/basicEditing/unfold.mp4" }],
 ]);
 
-const debug = new Map<string, Task>([
+const debug = new Map<string, Shortcut>([
   ["Continue", { combos: ["f5"], commands: ["workbench.action.debug.continue"], list: "Debug", src: "" }],
   ["Pause", { combos: ["f6"], commands: ["workbench.action.debug.pause"], list: "Debug", src: "" }],
   ["Start (without debugging)", { combos: ["ctrl+f5"], commands: ["workbench.action.debug.run"], list: "Debug", src: "" }],
@@ -73,7 +73,7 @@ const debug = new Map<string, Task>([
   ["Toggle Breakpoint", { combos: ["f9"], commands: ["editor.debug.action.toggleBreakpoint"], list: "Debug", src: "" }],
 ]);
 
-const display = new Map<string, Task>([
+const display = new Map<string, Shortcut>([
   ["Leave Zen Mode", { combos: ["escape escape"], commands: ["workbench.action.exitZenMode"], list: "Display", src: "" }],
   ["Open New Command Prompt", { combos: ["shift+cmd+c", "ctrl+shift+c"], commands: ["workbench.action.terminal.openNativeConsole"], list: "Display", src: "" }],
   ["Open Preview to the Side", { combos: ["cmd+k v", "ctrl+k v"], commands: ["markdown.showPreviewToSide"], list: "Display", src: "" }],
@@ -94,7 +94,7 @@ const display = new Map<string, Task>([
   ["Zoom out", { combos: ["cmd+-", "ctrl+-"], commands: ["workbench.action.zoomOut"], list: "Display", src: "" }],
 ]);
 
-const editorWindowManagement = new Map<string, Task>([
+const editorWindowManagement = new Map<string, Shortcut>([
   ["Close Editor", { combos: ["cmd+w", "ctrl+f4", "ctrl+w"], commands: ["workbench.action.closeActiveEditor"], list: "Editor/Window Management", src: "" }],
   ["Close Folder", { combos: ["cmd+k f", "ctrl+k f"], commands: ["workbench.action.closeFolder"], list: "Editor/Window Management", src: "" }],
   ["Close Window", { combos: ["cmd+w", "alt+f4"], commands: ["workbench.action.closeWindow"], list: "Editor/Window Management", src: "" }],
@@ -111,7 +111,7 @@ const editorWindowManagement = new Map<string, Task>([
   ["Split Editor", { combos: ["cmd+\\", "ctrl+\\"], commands: ["workbench.action.splitEditor"], list: "Editor/Window Management", src: "" }],
 ]);
 
-const fileManagement = new Map<string, Task>([
+const fileManagement = new Map<string, Shortcut>([
   ["Close Group", { combos: ["cmd+k w", "ctrl+k w"], commands: ["workbench.action.closeEditorsInGroup"], list: "File Management", src: "" }],
   ["Close Others", { combos: ["alt+cmd+t"], commands: ["workbench.action.closeOtherEditors"], list: "File Management", src: "" }],
   ["Copy Path of Active File", { combos: ["cmd+k p", "ctrl+k p"], commands: ["workbench.action.files.copyPathOfActiveFile"], list: "File Management", src: "" }],
@@ -126,7 +126,7 @@ const fileManagement = new Map<string, Task>([
   ["Save", { combos: ["cmd+s", "ctrl+s"], commands: ["workbench.action.files.save"], list: "File Management", src: "" }],
 ]);
 
-const navigation = new Map<string, Task>([
+const navigation = new Map<string, Shortcut>([
   ["Focus and Select Breadcrumbs", { combos: ["shift+cmd+.", "ctrl+shift+."], commands: ["breadcrumbs.focusAndSelect"], list: "Navigation", src: "" }],
   ["Focus Breadcrumbs", { combos: ["shift+cmd+;", "ctrl+shift+;"], commands: ["breadcrumbs.focus"], list: "Navigation", src: "" }],
   ["Go back in Quick Input", { combos: ["ctrl+-", "alt+left", "ctrl+alt+-"], commands: ["workbench.action.quickInputBack"], list: "Navigation", src: "" }],
@@ -143,13 +143,13 @@ const navigation = new Map<string, Task>([
   ["Show Problems", { combos: ["shift+cmd+m", "ctrl+shift+m"], commands: ["workbench.actions.view.problems"], list: "Navigation", src: "" }],
 ]);
 
-const preferences = new Map<string, Task>([
+const preferences = new Map<string, Shortcut>([
   ["Open Keyboard Shortcuts", { combos: ["cmd+k cmd+s", "ctrl+k ctrl+s"], commands: ["workbench.action.openGlobalKeybindings"], list: "Preferences", src: "" }],
   ["Open Settings", { combos: ["cmd+,", "ctrl+,"], commands: ["workbench.action.openSettings"], list: "Preferences", src: "" }],
   ["Select Color Theme", { combos: ["cmd+k cmd+t", "ctrl+k ctrl+t"], commands: ["workbench.action.selectTheme"], list: "Preferences", src: "" }],
 ]);
 
-const richLanguageEditing = new Map<string, Task>([
+const richLanguageEditing = new Map<string, Shortcut>([
   ["Expand AST Selection", { combos: ["ctrl+shift+cmd+right", "shift+alt+right"], commands: ["editor.action.smartSelect.expand"], list: "Rich Languages Editing", src: "" }],
   ["Format Document", { combos: ["shift+alt+f", "ctrl+shift+i"], commands: ["editor.action.formatDocument"], list: "Rich Languages Editing", src: "" }],
   ["Format Selection", { combos: ["cmd+k cmd+f", "ctrl+k ctrl+f"], commands: ["editor.action.formatSelection"], list: "Rich Languages Editing", src: "" }],
@@ -168,7 +168,7 @@ const richLanguageEditing = new Map<string, Task>([
   ["Trim Trailing Whitespace", { combos: ["cmd+k cmd+x", "ctrl+k ctrl+x"], commands: ["editor.action.trimTrailingWhitespace"], list: "Rich Languages Editing", src: "" }],
 ]);
 
-const search = new Map<string, Task>([
+const search = new Map<string, Shortcut>([
   ["Focus Next Search Result", { combos: ["f4"], commands: ["search.action.focusNextSearchResult"], list: "Search", src: "" }],
   ["Focus Previous Search Result", { combos: ["shift+f4"], commands: ["search.action.focusPreviousSearchResult"], list: "Search", src: "" }],
   ["Replace in Files", { combos: ["shift+cmd+h", "ctrl+shift+h"], commands: ["workbench.action.replaceInFiles"], list: "Search", src: "" }],
@@ -180,16 +180,16 @@ const search = new Map<string, Task>([
   ["Toggle Use Regular Expression", { combos: ["alt+cmd+r", "alt+r"], commands: ["toggleSearchRegex"], list: "Search", src: "" }],
 ]);
 
-const searchEditor = new Map<string, Task>([
+const searchEditor = new Map<string, Shortcut>([
   ["Delete File Results", { combos: ["shift+cmd+backspace", "ctrl+shift+backspace"], commands: ["search.searchEditor.action.deleteFileResults"], list: "Search Editor", src: "" }],
   ["Focus Search Editor Input", { combos: ["escape"], commands: ["search.action.focusQueryEditorWidget"], list: "Search Editor", src: "" }],
   ["Open Results In Editor", { combos: ["cmd+enter", "alt+enter"], commands: ["search.action.openInEditor"], list: "Search Editor", src: "" }],
   ["Search Again", { combos: ["shift+cmd+r", "ctrl+shift+r"], commands: ["rerunSearchEditorSearch"], list: "Search Editor", src: "" }],
 ]);
 
-// const tasks = new Map<string, Task>([
-//   ["Run Build Task", { combos: ["shift+cmd+b", "ctrl+shift+b"], commands: ["workbench.action.tasks.build"], list: "Tasks", src: "" }],
-// ]);
+const tasks = new Map<string, Shortcut>([
+  ["Run Build Shortcut", { combos: ["shift+cmd+b", "ctrl+shift+b"], commands: ["workbench.action.tasks.build"], list: "Tasks", src: "" }],
+]);
 // #endregion
 
-export const tasks = new Map<string, Task>([...basicEditing, ...debug, ...display, ...editorWindowManagement, ...fileManagement, ...navigation, ...preferences, ...richLanguageEditing, ...search, ...searchEditor]);
+export const shortcuts = new Map<string, Shortcut>([...basicEditing, ...debug, ...display, ...editorWindowManagement, ...fileManagement, ...navigation, ...preferences, ...richLanguageEditing, ...search, ...searchEditor, ...tasks]);
