@@ -13,6 +13,7 @@ const cursorControl = new Map<string, Shortcut>([
   ["Go to Beginning of File", { combos: ["cmd+up", "ctrl+home"], commands: ["cursorTop"], list: "Cursor Control", src: "videos/cursorControl/cursorTop.mp4" }],
   ["Go to Beginning of Line", { combos: ["home"], commands: ["cursorHome"], list: "Cursor Control", src: "videos/cursorControl/cursorHome.mp4" }],
   ["Go to Beginning of Word", { combos: ["alt+left", "ctrl+left"], commands: ["cursorWordLeft"], list: "Cursor Control", src: "" }],
+  ["Go to Definition", { combos: ["cmd+f12", "f12", "ctrl+f12"], commands: ["editor.action.revealDefinition"], list: "Cursor Control", src: "" }],
   ["Go to End of File", { combos: ["cmd+down", "ctrl+end"], commands: ["cursorBottom"], list: "Cursor Control", src: "videos/cursorControl/cursorBottom.mp4" }],
   ["Go to End of Line", { combos: ["end"], commands: ["cursorEnd"], list: "Cursor Control", src: "videos/cursorControl/cursorEnd.mp4" }],
   ["Go to End of Word", { combos: ["alt+right", "ctrl+right"], commands: ["cursorWordRight"], list: "Cursor Control", src: "" }],
