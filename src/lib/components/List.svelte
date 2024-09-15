@@ -1,7 +1,7 @@
 <script lang="ts">
   import { selectedTaskList } from "$lib/refs.svelte";
 
-  const taskLists = ["Basic Editing", "Rich Languages Editing", "Navigation", "Editor/Window Management", "File Management", "Display", "Search", "Search Editor", "Preferences", "Debug"];
+  const taskLists = ["Cursor Control", "Editing", "Environment Management"];
 </script>
 
 <div>
