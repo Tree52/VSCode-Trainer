@@ -12,19 +12,19 @@ type Shortcut = {
 const cursorControl = new Map<string, Shortcut>([
   ["Go to Beginning of File", { combos: ["cmd+up", "ctrl+home"], commands: ["cursorTop"], list: "Cursor Control", src: "videos/cursorControl/cursorTop.mp4" }],
   ["Go to Beginning of Line", { combos: ["home"], commands: ["cursorHome"], list: "Cursor Control", src: "videos/cursorControl/cursorHome.mp4" }],
-  ["Go to Beginning of Word", { combos: ["alt+left", "ctrl+left"], commands: ["cursorWordLeft"], list: "Cursor Control", src: "" }],
-  ["Go to Definition", { combos: ["cmd+f12", "f12", "ctrl+f12"], commands: ["editor.action.revealDefinition"], list: "Cursor Control", src: "" }],
+  ["Go to Beginning of Word", { combos: ["alt+left", "ctrl+left"], commands: ["cursorWordLeft"], list: "Cursor Control", src: "videos/cursorControl/cursorWordLeft.mp4" }],
+  ["Go to Definition", { combos: ["cmd+f12", "f12", "ctrl+f12"], commands: ["editor.action.revealDefinition"], list: "Cursor Control", src: "videos/cursorControl/revealDefinition.mp4" }],
   ["Go to End of File", { combos: ["cmd+down", "ctrl+end"], commands: ["cursorBottom"], list: "Cursor Control", src: "videos/cursorControl/cursorBottom.mp4" }],
   ["Go to End of Line", { combos: ["end"], commands: ["cursorEnd"], list: "Cursor Control", src: "videos/cursorControl/cursorEnd.mp4" }],
-  ["Go to End of Word", { combos: ["alt+right", "ctrl+right"], commands: ["cursorWordRight"], list: "Cursor Control", src: "" }],
-  ["Go to File..., Quick Open", { combos: ["cmd+p", "ctrl+p", "ctrl+e"], commands: ["workbench.action.quickOpen"], list: "Cursor Control", src: "" }],
-  ["Go to Line...", { combos: ["ctrl+g"], commands: ["workbench.action.gotoLine"], list: "Cursor Control", src: "" }],
-  ["Go to Symbol...", { combos: ["shift+cmd+o", "ctrl+shift+o"], commands: ["workbench.action.gotoSymbol"], list: "Cursor Control", src: "" }],
-  ["Insert Cursor Above", { combos: ["alt+cmd+up", "ctrl+alt+up", "shift+alt+up"], commands: ["editor.action.insertCursorAbove"], list: "Cursor Control", src: "" }],
-  ["Insert cursor at end of each line selected", { combos: ["shift+alt+i"], commands: ["editor.action.insertCursorAtEndOfEachLineSelected"], list: "Cursor Control", src: "" }],
-  ["Insert Cursor Below", { combos: ["alt+cmd+down", "ctrl+alt+down", "shift+alt+down"], commands: ["editor.action.insertCursorBelow"], list: "Cursor Control", src: "" }],
+  ["Go to End of Word", { combos: ["alt+right", "ctrl+right"], commands: ["cursorWordRight"], list: "Cursor Control", src: "videos/cursorControl/cursorWordRight.mp4" }],
+  ["Go to File..., Quick Open", { combos: ["cmd+p", "ctrl+p", "ctrl+e"], commands: ["workbench.action.quickOpen"], list: "Cursor Control", src: "videos/cursorControl/quickOpen.mp4" }],
+  ["Go to Line...", { combos: ["ctrl+g"], commands: ["workbench.action.gotoLine"], list: "Cursor Control", src: "videos/cursorControl/gotoLine.mp4" }],
+  ["Go to Symbol...", { combos: ["shift+cmd+o", "ctrl+shift+o"], commands: ["workbench.action.gotoSymbol"], list: "Cursor Control", src: "videos/cursorControl/gotoSymbol.mp4" }],
+  ["Insert Cursor Above", { combos: ["alt+cmd+up", "ctrl+alt+up", "shift+alt+up"], commands: ["editor.action.insertCursorAbove"], list: "Cursor Control", src: "videos/cursorControl/insertCursorAbove.mp4" }],
+  ["Insert cursor at end of each line selected", { combos: ["shift+alt+i"], commands: ["editor.action.insertCursorAtEndOfEachLineSelected"], list: "Cursor Control", src: "videos/cursorControl/insertCursorAtEndOfEachLineSelected.mp4" }],
+  ["Insert Cursor Below", { combos: ["alt+cmd+down", "ctrl+alt+down", "shift+alt+down"], commands: ["editor.action.insertCursorBelow"], list: "Cursor Control", src: "videos/cursorControl/insertLineBefore.mp4" }],
   ["Jump to matching bracket", { combos: ["shift+cmd+\\", "ctrl+shift+\\"], commands: ["editor.action.jumpToBracket"], list: "Cursor Control", src: "videos/cursorControl/jumpToBracket.mp4" }],
-  ["Undo last cursor operation", { combos: ["cmd+u", "ctrl+u"], commands: ["cursorUndo"], list: "Cursor Control", src: "" }],
+  ["Undo last cursor operation", { combos: ["cmd+u", "ctrl+u"], commands: ["cursorUndo"], list: "Cursor Control", src: "videos/cursorControl/cursorUndo.mp4" }],
 ]);
 
 const editing = new Map<string, Shortcut>([
@@ -59,7 +59,6 @@ const editing = new Map<string, Shortcut>([
 
 const environmentManagement = new Map<string, Shortcut>([
   ["Create New Terminal", { combos: ["ctrl+shift+`"], commands: ["workbench.action.terminal.new"], list: "Environment Management", src: "" }],
-  ["Leave Zen Mode", { combos: ["escape escape"], commands: ["workbench.action.exitZenMode"], list: "Environment Management", src: "" }],
   ["Move Active Editor Group Left", { combos: ["cmd+k left", "ctrl+k left"], commands: ["workbench.action.moveActiveEditorGroupLeft"], list: "Environment Management", src: "" }],
   ["Move Active Editor Group Right", { combos: ["cmd+k right", "ctrl+k right"], commands: ["workbench.action.moveActiveEditorGroupRight"], list: "Environment Management", src: "" }],
   ["Move Editor into Next Group", { combos: ["ctrl+cmd+right", "ctrl+alt+right"], commands: ["workbench.action.moveEditorToNextGroup"], list: "Environment Management", src: "" }],
