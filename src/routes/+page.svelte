@@ -120,9 +120,7 @@
   {:else}
     <div>{result}</div>
     <div>{randomTask.key}</div>
-    {#if randomTask.src !== ""}
-      <video autoplay class="w-1/2" class:isLoading loop muted oncanplay={() => { isLoading = false; }} onloadstart={() => { isLoading = true; }} src={randomTask.src}></video>
-    {/if}
+    <video autoplay class="w-1/2" class:isLoading loop muted oncanplay={() => { isLoading = false; }} onloadstart={() => { isLoading = true; }} src={randomTask.src}></video>
     {#if isLoading}
       <div class="spinner"></div>
     {/if}
