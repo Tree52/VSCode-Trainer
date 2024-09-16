@@ -69,6 +69,9 @@
   };
 
   const onkeydown = (e: KeyboardEvent) => {
+    if (e.ctrlKey && e.code === "Enter") enterPressed.v = true;
+    if (!enterPressed.v) return;
+
     e.preventDefault();
     if (e.repeat) return;
 
@@ -76,7 +79,6 @@
     time = setTimeout(reset, 500);
 
     if (!isModifierKey(e.code)) numNonModifierKeysPressed++;
-    if (e.code === "Enter") enterPressed.v = true;
 
     heldKeys.push(e.code);
 
@@ -102,6 +104,11 @@
   $effect(() => { if (!enterPressed.v) randomTaskIndex = 0; });
 
   $effect(() => { if (isSolved) onSolved(); });
+
+  $effect(() => {
+    if (result === "s s") onSolved();
+    if (result === "b b") enterPressed.v = false;
+  });
 </script>
 
 <Header />
@@ -116,7 +123,7 @@
 
 <main class="flex flex-1 flex-col items-center justify-center gap-2">
   {#if !enterPressed.v}
-    <button class="border-2 border-white px-2 py-1 text-3xl font-bold" onclick={() => { enterPressed.v = true; }}>Enter</button>
+    <button class="border-2 border-white px-2 py-1 text-3xl font-bold" onclick={() => { enterPressed.v = true; }}>Ctrl + Enter</button>
   {:else}
     <div>{result}</div>
     <div>{randomTask.key}</div>
@@ -125,7 +132,7 @@
       <div class="spinner"></div>
     {/if}
     <div class="bg-white hover:bg-primary-color">{randomTask.combos.map(combo => `"${combo}"`).join(" ")}</div>
-    <button onclick={onSolved}>Skip</button>
+    <button onclick={onSolved}>Skip (s s)</button>
   {/if}
 </main>
 

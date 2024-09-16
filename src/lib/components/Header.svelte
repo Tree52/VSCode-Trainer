@@ -15,6 +15,6 @@
 </header>
 {:else}
   <div class="absolute left-2">
-    <button onclick={() => { enterPressed.v = false; }}>Back</button>
+    <button onclick={() => { enterPressed.v = false; }}>Back (b b)</button>
   </div>
 {/if}
