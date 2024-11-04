@@ -4,6 +4,10 @@ A hotkey trainer for VSCode targeted towards beginners.
 
 https://tree52.github.io/VSCode-Trainer/
 
+# Commands
+
+https://github.com/Tree52/VSCode-Trainer/blob/main/src/lib/shortcuts.ts
+
 # Other Commands
 
 - **Show All Commands**
