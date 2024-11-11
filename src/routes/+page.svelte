@@ -1,8 +1,7 @@
 <script lang="ts">
-  import { browser } from "$app/environment";
   import { codeToKey } from "$lib/codeToKey";
   import Header from "$lib/components/Header.svelte";
-  import { enterPressed, isRandomized, selectedTaskList } from "$lib/refs.svelte";
+  import { enterPressed, isRandomized, os, selectedTaskList } from "$lib/refs.svelte";
   import { shortcuts } from "$lib/shortcuts";
 
   import "../app.css";
@@ -14,21 +13,7 @@
     const modifierKeys = ["ControlLeft", "ControlRight", "ShiftLeft", "ShiftRight", "AltLeft", "AltRight", "MetaLeft", "MetaRight"];
     return modifierKeys.includes(code);
   };
-
-  const getOS = () => {
-    if (browser) {
-      const userAgent = window.navigator.userAgent;
-
-      if (/Windows/i.test(userAgent)) return "Windows";
-      else if (/Mac/i.test(userAgent)) return "macOS";
-      else if (/Linux/i.test(userAgent)) return "Linux";
-      // else if (/Android/i.test(userAgent)) return "Android";
-      // else if (/iPhone|iPad|iPod/i.test(userAgent)) return "iOS";
-    }
-  };
   // #endregion
-
-  const os = getOS();
 
   let numNonModifierKeysPressed = 0;
   let randomTaskIndex = $state(0);
@@ -41,7 +26,17 @@
   const values = $derived(filteredEntries.map(([, value]) => value));
   const keys = $derived(filteredEntries.map(([key]) => key));
 
-  const randomTask = $derived({ combos: values[randomTaskIndex].combos, key: keys[randomTaskIndex], src: values[randomTaskIndex].src });
+  const randomTask = $derived.by(() => {
+    let _combos: string[] = [];
+
+    switch (os.v) {
+      case "Linux": _combos = values[randomTaskIndex].linux; break;
+      case "macOS": _combos = values[randomTaskIndex].mac; break;
+      case "Windows": _combos = values[randomTaskIndex].win; break;
+    }
+
+    return { combos: _combos, key: keys[randomTaskIndex], src: values[randomTaskIndex].src };
+  });
   const isSolved = $derived(randomTask.combos.includes(result));
 
   const styleHeldKeys = (code: string) => {
@@ -51,7 +46,7 @@
     if (heldKeys.includes("ShiftLeft") || heldKeys.includes("ShiftRight")) _result.push("shift");
     if (heldKeys.includes("AltLeft") || heldKeys.includes("AltRight")) _result.push("alt");
     if (heldKeys.includes("MetaLeft") || heldKeys.includes("MetaRight")) {
-      switch (os) {
+      switch (os.v) {
         case "Linux": _result.push("meta"); break;
         case "macOS": _result.push("cmd"); break;
         case "Windows": _result.push("win"); break;
