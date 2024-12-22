@@ -2,11 +2,9 @@
 
 A hotkey trainer for VSCode targeted towards beginners.
 
-https://tree52.github.io/VSCode-Trainer/
-
 # Commands
 
-https://github.com/Tree52/VSCode-Trainer/blob/main/src/lib/shortcuts.ts
+https://github.com/JeffHove/VSCode-Trainer/blob/main/src/lib/shortcuts.ts
 
 # Other Commands
 
@@ -47,7 +45,7 @@ https://github.com/Tree52/VSCode-Trainer/blob/main/src/lib/shortcuts.ts
 
 # Viewing dev build (possibly broken)
 ```
-git clone https://github.com/Tree52/VSCode-Trainer.git
+git clone https://github.com/JeffHove/VSCode-Trainer.git
 cd .\VSCode-Trainer\
 bun install
 bun dev
